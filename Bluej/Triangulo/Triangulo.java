@@ -8,27 +8,29 @@
 public class Triangulo
 {
     // instance variables - replace the example below with your own
-    private float l1;
-    private float l2;
-    private float l3;
+    private 
+    int l1;
+    int l2;
+    int l3;
 
     /**
      * Constructor for objects of class Triangulo
      */
-    public Triangulo()
+     public Triangulo()
     {
         // initialise instance variables
-        l1 = 0;
-        l2 = 0;
-        l3 = 0;
+        l1 = 60;
+        l2 = 30;
+        l3 = 90;
     }
-    public Triangulo(float l1, float l2, float l3)
+    public Triangulo(int l1, int l2, int l3)
     {
         // initialise instance variables
-        l1 = l1;
-        l2 = l2;
-        l3 = l3;
+        this.l1 = l1;
+        this.l2 = l2;
+        
     }
+   
 
     /**
      * An example of a method - replace this comment with your own
@@ -36,9 +38,10 @@ public class Triangulo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public float (int y)
+    public 
+    float ladoMayor()
     {
         // put your code here
-        return x + y;
+        
     }
 }
