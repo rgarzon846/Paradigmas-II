@@ -58,6 +58,12 @@ public class ProcesoProductivo
     float getCantidad(){
         return cantidadActual;
     }
+    float getMaximo(){
+        return cantidadMaxima;
+    }
+    float getMinimo(){
+        return cantidadMinima;
+    }
     
     
     void ingresarMaterial(float cantidad)
@@ -74,18 +80,15 @@ public class ProcesoProductivo
       void extraerMaterial(float cantidad)
     {
         // put your code here
-        do{
-            System.out.println("Ingrese la cantidad de material que desea extraer");
+        System.out.println("Ingrese la cantidad de material que desea extraer");
         this.cantidadActual = this.cantidadActual - cantidad;
-        if(this.cantidadActual < cantidadMinima){
-            System.out.println("No puede extraer la cantidad de material ingresada");
+
+    }
+    void Alarma(){
+        if(cantidadActual < cantidadMinima){
+            System.out.println("Alarma Activada");
         }
-    }while(this.cantidadActual > cantidadMaxima);
     }
-    float getcantidadActual()
-    {
-        // put your code here
-        return cantidadActual;
-    }
+  
     
 }
