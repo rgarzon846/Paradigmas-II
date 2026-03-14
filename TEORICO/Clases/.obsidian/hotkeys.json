@@ -14,5 +14,13 @@
       ],
       "key": "Z"
     }
+  ],
+  "calendar:show-calendar-view": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "C"
+    }
   ]
 }
