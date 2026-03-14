@@ -28,7 +28,7 @@ public class Triangulo
         // initialise instance variables
         this.l1 = l1;
         this.l2 = l2;
-        
+        this.l3 = l3;
     }
    
 
@@ -39,9 +39,22 @@ public class Triangulo
      * @return     the sum of x and y 
      */
     public 
-    float ladoMayor()
+    void ladoMayor()
     {
         // put your code here
-        
+        if(l1 > l2 && l1 > l3){
+            System.out.println("El lado mayor es el lado 1: " + l3);
+        }else if(l2 > l1 && l2 > l3){
+            System.out.println("El lado mayor es el lado 2: " + l2);
+        }else{
+            System.out.println("El lado mayor es el lado 3: " + l3);
+        }
+    }
+    void Equilatero(){
+        if(l1 == l2 && l2 == l3){
+            System.out.println("El triangulo es equilatero");
+        }else{
+            System.out.println("El triangulo no es equilatero");
+        }
     }
 }
