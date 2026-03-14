@@ -40,6 +40,26 @@ public class ProcesoProductivo
      */
     public 
     
+    void setMaterial(String material){
+        this.material = material;
+    }
+    void setCantidad(float cantidadActual){
+        this.cantidadActual = cantidadActual;
+    }
+    void setMaximo(float cantidadMaxima){
+        this.cantidadMaxima = cantidadMaxima;
+    }
+    void setMinimo(float cantidadMinima){
+        this.cantidadMinima = cantidadMinima;
+    }
+    String getMaterial(){
+        return material;
+    }
+    float getCantidad(){
+        return cantidadActual;
+    }
+    
+    
     void ingresarMaterial(float cantidad)
     {
         // put your code here
@@ -58,7 +78,7 @@ public class ProcesoProductivo
             System.out.println("Ingrese la cantidad de material que desea extraer");
         this.cantidadActual = this.cantidadActual - cantidad;
         if(this.cantidadActual < cantidadMinima){
-            System.out.println("No puede agregar la cantidad de material ingresada");
+            System.out.println("No puede extraer la cantidad de material ingresada");
         }
     }while(this.cantidadActual > cantidadMaxima);
     }
