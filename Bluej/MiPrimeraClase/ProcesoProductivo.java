@@ -21,19 +21,12 @@ public class ProcesoProductivo
      */
     public 
     
-    ProcesoProductivo()
-    {
-        // initialise instance variables
-      material = "";
-      cantidadActual = 0;
-      cantidadMaxima = 100;
-      cantidadMinima = 10;
-    }    
-    ProcesoProductivo(String material, float cantidadActual)
+    ProcesoProductivo(String material, float cantidadActual, float cantidadMinima, float cantidadMaxima)
     {
         // initialise instance variables
       this.material = material;
       this.cantidadActual = cantidadActual;
+      
     }
     
     
