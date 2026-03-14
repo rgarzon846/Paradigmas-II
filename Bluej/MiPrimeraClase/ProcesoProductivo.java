@@ -21,18 +21,19 @@ public class ProcesoProductivo
      */
     public 
     
-    ProcesoProductivo(String material, float cantidadActual, float cantidadMinima, float cantidadMaxima)
+    ProcesoProductivo()
     {
         // initialise instance variables
-        do{
-            if(cantidadActual > cantidadMaxima || cantidadActual < cantidadMinima){
-                System.out.println("Los valores ingresados estan fuera de los permitidos");
-            }
-        this.material = material;
-        this.cantidadActual = cantidadActual;
-        this.cantidadMinima = cantidadMinima;
-        this.cantidadMaxima = cantidadMaxima;
-    }while(cantidadActual > cantidadMaxima || cantidadActual < cantidadMinima);
+      material = "";
+      cantidadActual = 0;
+      cantidadMaxima = 100;
+      cantidadMinima = 10;
+    }    
+    ProcesoProductivo(String material, float cantidadActual)
+    {
+        // initialise instance variables
+      this.material = material;
+      this.cantidadActual = cantidadActual;
     }
     
     
