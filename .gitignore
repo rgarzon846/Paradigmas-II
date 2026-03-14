@@ -1,0 +1,19 @@
+# Archivos compilados
+*.o
+*.out
+
+# Instaladores o binarios
+*.deb
+*.exe
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Configuración local de Obsidian
+.obsidian/workspace*
+.obsidian/cache
+
+# Sistema
+.DS_Store
+Thumbs.db
