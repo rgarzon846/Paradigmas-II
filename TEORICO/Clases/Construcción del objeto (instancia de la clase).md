@@ -8,4 +8,5 @@ Para ejecutar un método:
 
 RECORDAR: LA UNICA FORMA DE ACCEDER A LA INFORMACIÓN DE LOS ATRIBUTOS ES MEDIANTE LOS MÉTODOS.
 
-
+MÉTODOS:
+[[Mapa constructores]]
