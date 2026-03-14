@@ -69,7 +69,7 @@ public class ProcesoProductivo
     void ingresarMaterial(float cantidad)
     {
         // put your code here
-        if(cantidad > cantidadMaxima){
+        if(cantidad > cantidadMaxima || cantidad < cantidadMinima){
             System.out.println("No se puede ingresar esta cantidad de material");
         }else{
             cantidadActual = cantidadActual + cantidad;
@@ -78,10 +78,10 @@ public class ProcesoProductivo
       void extraerMaterial(float cantidad)
     {
         // put your code here
-         if(cantidad < cantidadMinima){
+         if((cantidadActual - cantidad) < cantidadMinima){
             System.out.println("No se puede extraer esta cantidad de material");
         }else{
-            cantidadActual = cantidadActual + cantidad;
+            cantidadActual = cantidadActual - cantidad;
         }
     }
     void Alarma(){
