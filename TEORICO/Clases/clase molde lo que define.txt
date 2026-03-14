@@ -1,0 +1,53 @@
+clase: molde/lo que define lo que podra hacer un objeto (ej. banco)
+objeto: lo que cumple las caracteristicas de la clase y se encuentra dentro de ella (ej. cuentas)
+metodos: define la responsabilidad a la clase, las funciones del objeto (ej. ver saldo)
+mirar dentro de la clase: ver el codigo, caracteristicas y metodos del objeto, como se arma la clase
+ver dentro del objeto: ver los estados de las caracteristicas de la clase, de los parametros
+tres tipos de metodos generales: 
+getters: extraer el dato de la clase
+setters: modificar el dato de la clase
+estado de la clase: valor de sus campos
+
+
+
+
+public class Triangulo{ //siempre comienza con mayus el nombre de la clase
+private float lado1;
+private float lado2;
+private float lado3;
+
+//constructores los mas importantes
+public void Triangulo(){	//La inicializacion puede ser con el valor de datos que queramos no si o si con 0;
+lado1 = 0;
+lado2 = 0;
+lado3 = 0;
+}
+public void Triangulo(){
+System.out.println(lado1);
+}
+public void Triangulo(){
+if(lado1 == lado2 && lado2 == lado3){
+System.out.println("El triangulo es equilatero");
+}
+}
+public void Triangulo(float lado1, float lado2, float lado3){
+lado1 = 3;
+lado2 = 6;
+lado3 = 7;
+}
+public void Triangulo(float lado1, float lado2, float lado3){
+buscar el mayor
+System.out.println(lado mayor);
+}
+public void Triangulo(float lado1, float lado2, float lado3){
+if(lado1 == lado2 && lado2 == lado3){
+System.out.println("El triangulo es equilatero");
+}
+}
+
+//Metodos generales
+
+}
+
+En el mismo codigo podemos hacer tantos constructores como necesitemos
+signatura: cabecera del metodo que se define, si la signatura cambia pero el metodo se llama igual se dice que "se sobrecarga el nombre del metodo"

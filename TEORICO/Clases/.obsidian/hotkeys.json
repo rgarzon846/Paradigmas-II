@@ -1,0 +1,18 @@
+{
+  "pdf-plus:copy-link-to-selection": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "V"
+    }
+  ],
+  "pdf-plus:copy-link-to-page-view": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Z"
+    }
+  ]
+}
