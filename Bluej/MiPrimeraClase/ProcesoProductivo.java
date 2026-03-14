@@ -70,7 +70,6 @@ public class ProcesoProductivo
     {
         // put your code here
         do{
-            System.out.println("Ingrese la cantidad de material deseada");
         this.cantidadActual = this.cantidadActual + cantidad;
         if(this.cantidadActual > cantidadMaxima){
             System.out.println("No puede agregar la cantidad de material ingresada");
@@ -80,7 +79,6 @@ public class ProcesoProductivo
       void extraerMaterial(float cantidad)
     {
         // put your code here
-        System.out.println("Ingrese la cantidad de material que desea extraer");
         this.cantidadActual = this.cantidadActual - cantidad;
 
     }
