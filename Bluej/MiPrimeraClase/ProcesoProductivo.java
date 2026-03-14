@@ -21,12 +21,13 @@ public class ProcesoProductivo
      */
     public 
     
-    ProcesoProductivo(String material, float cantidadActual, float cantidadMinima, float cantidadMaxima)
+    ProcesoProductivo()
     {
         // initialise instance variables
-      this.material = material;
-      this.cantidadActual = cantidadActual;
-      
+      material = "Cemento";
+      cantidadActual = 10;
+      cantidadMaxima = 100;
+      cantidadMinima = 10;
     }
     
     
@@ -43,8 +44,20 @@ public class ProcesoProductivo
     {
         // put your code here
         do{
+            System.out.println("Ingrese la cantidad de material deseada");
         this.cantidadActual = this.cantidadActual + cantidad;
         if(this.cantidadActual > cantidadMaxima){
+            System.out.println("No puede agregar la cantidad de material ingresada");
+        }
+    }while(this.cantidadActual > cantidadMaxima);
+    }
+      void extraerMaterial(float cantidad)
+    {
+        // put your code here
+        do{
+            System.out.println("Ingrese la cantidad de material que desea extraer");
+        this.cantidadActual = this.cantidadActual - cantidad;
+        if(this.cantidadActual < cantidadMinima){
             System.out.println("No puede agregar la cantidad de material ingresada");
         }
     }while(this.cantidadActual > cantidadMaxima);
