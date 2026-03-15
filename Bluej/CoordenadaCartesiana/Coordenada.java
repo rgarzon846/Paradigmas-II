@@ -44,8 +44,10 @@ public class Coordenada
             System.out.println("El punto se encuantra en el primer cuadrante");
         }else if(x < 0 && y >0){
             System.out.println("El punto se encuentra en el segundo cuadrante");
-        }else if(){
-            
+        }else if(x < 0 && y < 0){
+            System.out.println("El punto se encuentra en el tercer cuadrante");
+        }else if(x > 0 && y < 0){
+            System.out.println("El punto se encuentra en el cuarto cuadrante");
         }
     }
 }
