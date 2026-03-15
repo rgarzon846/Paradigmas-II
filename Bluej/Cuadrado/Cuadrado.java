@@ -9,10 +9,7 @@ public class Cuadrado
 {
     // instance variables - replace the example below with your own
     private 
-    int l1;
-    int l2;
-    int l3;
-    int l4;
+    int lado;
 
     /**
      * Constructor for objects of class Cuadrado
@@ -20,10 +17,7 @@ public class Cuadrado
     public Cuadrado()
     {
         // initialise instance variables
-        l1 = 0;
-        l2 = 0;
-        l3 = 0;
-        l4 = 0;
+        lado = 0;
     }
 
     /**
@@ -34,23 +28,18 @@ public class Cuadrado
      */
     public 
     
-    void setL1(int l1)
+    void setL1(int lado)
     {
         // put your code here
-        this.l1 = l1;
-    }
-    void setL2(int l2){
-        this.l2 = l2;
-    }
-    void setL3(int l3){
-        this.l3 = l3;
-    }
-    void setL4(int l4){
-        this.l4 = l4;
+        this.lado = lado;
     }
     
     void Perimetro(){
-        
-        System.out.println("El perimetro del cuadrado es: ");
+        int perimetro = lado*4;
+        System.out.println("El perimetro del cuadrado es: " + perimetro);
+    }
+    void Area(){
+        int area = lado*lado;
+        System.out.println("El area del cuadrado es: " + area);
     }
 }
