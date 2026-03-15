@@ -8,7 +8,9 @@
 public class Coordenada
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private 
+    float x;
+    float y;
 
     /**
      * Constructor for objects of class Coordenada
@@ -17,6 +19,7 @@ public class Coordenada
     {
         // initialise instance variables
         x = 0;
+        y = 0;
     }
 
     /**
@@ -25,9 +28,24 @@ public class Coordenada
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    
+    void setX(float x)
     {
         // put your code here
-        return x + y;
+        this.x = x;
+    }
+    void setY(float y){
+        this.y = y;
+    }
+    
+    void Cuadrante(){
+        if(x > 0 && y >0){
+            System.out.println("El punto se encuantra en el primer cuadrante");
+        }else if(x < 0 && y >0){
+            System.out.println("El punto se encuentra en el segundo cuadrante");
+        }else if(){
+            
+        }
     }
 }
