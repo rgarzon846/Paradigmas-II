@@ -24,6 +24,13 @@ public class Libro
         autor = "";
         estado = "";
     }
+     Libro(String titulo, String autor, String estado)
+    {
+        // initialise instance variables
+        this.titulo = titulo;
+        this.autor = autor;
+        this.estado = estado;
+    }
 
     /**
      * An example of a method - replace this comment with your own
