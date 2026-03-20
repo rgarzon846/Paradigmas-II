@@ -1,14 +1,12 @@
+import java.util.Random;
 
-/**
- * Write a description of class Usuario here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Usuario
+public class Usuario extends Prestamo
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private
+    int id;
+    String nombre;
+    Random rand = new Random();
 
     /**
      * Constructor for objects of class Usuario
@@ -16,18 +14,17 @@ public class Usuario
     public Usuario()
     {
         // initialise instance variables
-        x = 0;
+        id = 0;
+        nombre = "";
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public Usuario(String nombre)
     {
-        // put your code here
-        return x + y;
+        // initialise instance variables
+        this.nombre = nombre;
+        this.id = rand.nextInt(9000) + 1000;
+    }
+    
+    public int getId(){
+        return id;
     }
 }
