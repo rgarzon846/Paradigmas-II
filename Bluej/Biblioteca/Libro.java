@@ -38,9 +38,13 @@ public class Libro
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    void setEstado(String estado)
     {
         // put your code here
-        return x + y;
+        this.estado = estado;
+    }
+    String getEstado(){
+        return estado;
     }
 }
