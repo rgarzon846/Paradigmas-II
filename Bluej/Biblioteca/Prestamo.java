@@ -30,7 +30,8 @@ public class Prestamo
      * @return     the sum of x and y 
      */
     public 
-    void solicitarPrestamo()
+    
+    boolean solicitarPrestamo()
     {
         // put your code here
         
@@ -38,7 +39,23 @@ public class Prestamo
     
     boolean verificarLibro()
     {
-        if(libro.getEstado() == "Disponible"){
+        if(libro.getEstado().equals("Disponible")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    void actualizarEstado(){
+        if(libro.getEstado().equals("Disponible")){
+            libro.setEstado("Prestado");
+        }else{
+            libro.setEstado("Disponible");
+        }
+    }
+    
+    void resultadoOperacion(){
+        if(){
             
         }
     }
