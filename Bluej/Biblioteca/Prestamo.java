@@ -36,8 +36,6 @@ public class Prestamo
      private void actualizarEstado(){
         if(libro.getEstado().equals("Disponible")){
             libro.setEstado("Prestado");
-            actualizarEstado(); 
-            prestamo = true;
         }else{
             libro.setEstado("Disponible");
         }
@@ -48,8 +46,11 @@ public class Prestamo
     boolean solicitarPrestamo()
     {
         // put your code here
+        devolver = false;
         verificarEstado();
         if(verificarEstado()){
+            actualizarEstado(); 
+            prestamo = true;
             return true;
         }else{
             return false;
@@ -66,21 +67,25 @@ public class Prestamo
         }
     }
     
-    void resultadoOperacion(){
+    void resultadoOperacionPrestamo(){
         if(prestamo){
             System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());
-            prestamo = false;
-        }else if(prestamo == false && devolver == false){
+        }else{
             System.out.println("El libro no se encuentra disponible");
-        }
-        if(devolver){
-            System.out.println("La devolucion se ha realizado con exito! id: " + usuario.getId());
-        }else if(prestamo == false && devolver == false){
-            System.out.println("El libro no fue prestado");
         }
     }
     
+    void resultadoOperacionDevolver(){
+        if(devolver){
+            System.out.println("La devolucion se ha realizado con exito! id: " + usuario.getId());
+        }else{
+            System.out.println("El libro no fue prestado");
+        }
+        
+    }
+    
     void devolverLibro(){
+        prestamo = false;
         actualizarEstado();
         System.out.println("El libro prestado al id: " + usuario.getId() + "se ha devuelto con exito");
         devolver = true;
