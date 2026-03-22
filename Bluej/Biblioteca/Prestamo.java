@@ -34,10 +34,18 @@ public class Prestamo
     boolean solicitarPrestamo()
     {
         // put your code here
+        verificarEstado();
+        if(verificarEstado()){
+            return true;
+            actualizarEstado();
+        }else{
+            return false;
+            actualizarEstado();
+        }
         
     }
     
-    boolean verificarLibro()
+    boolean verificarEstado()
     {
         if(libro.getEstado().equals("Disponible")){
             return true;
@@ -46,7 +54,7 @@ public class Prestamo
         }
     }
     
-    void actualizarEstado(){
+    private void actualizarEstado(){
         if(libro.getEstado().equals("Disponible")){
             libro.setEstado("Prestado");
         }else{
@@ -54,9 +62,11 @@ public class Prestamo
         }
     }
     
-    void resultadoOperacion(){
-        if(){
-            
+    public void resultadoOperacion(){
+        if(solicitarPrestamo()){
+            System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());
+        }else{
+            System.out.println("El libro no se encuentra disponible");
         }
     }
 }
