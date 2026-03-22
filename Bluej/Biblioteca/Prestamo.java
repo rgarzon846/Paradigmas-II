@@ -19,7 +19,7 @@ public class Prestamo
     Prestamo()
     {
         // initialise instance variables
-        libro = new Libro("Caperucita", "Charles", "Libre");
+        libro = new Libro("Caperucita", "Charles", "Disponible");
         usuario = new Usuario("Juan");
     }
 
@@ -29,10 +29,17 @@ public class Prestamo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    //public 
-    //void solicitarPrestamo()
-    //{
+    public 
+    void solicitarPrestamo()
+    {
         // put your code here
         
-    //}
+    }
+    
+    boolean verificarLibro()
+    {
+        if(libro.getEstado() == "Disponible"){
+            
+        }
+    }
 }

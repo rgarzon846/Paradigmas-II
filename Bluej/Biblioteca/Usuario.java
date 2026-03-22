@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Usuario extends Prestamo
+public class Usuario
 {
     // instance variables - replace the example below with your own
     private

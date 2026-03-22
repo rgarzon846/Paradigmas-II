@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Libro extends Prestamo
+public class Libro
 {
     // instance variables - replace the example below with your own
     private 
@@ -24,7 +24,7 @@ public class Libro extends Prestamo
         autor = "";
         estado = "";
     }
-     Libro(String titulo, String autor, String estado)
+    Libro(String titulo, String autor, String estado)
     {
         // initialise instance variables
         this.titulo = titulo;
