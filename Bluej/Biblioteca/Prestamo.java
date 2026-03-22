@@ -19,8 +19,8 @@ public class Prestamo
     Prestamo()
     {
         // initialise instance variables
-        libro = new Libro();
-        usuario = new Usuario();
+        libro = new Libro("Caperucita Roja", "Charles Perrault", "Libre");
+        usuario = new Usuario("Juan");
     }
 
     /**
@@ -30,9 +30,9 @@ public class Prestamo
      * @return     the sum of x and y 
      */
     public 
-    int sampleMethod(int y)
+    void solicitarPrestamo()
     {
         // put your code here
-        return x + y;
+        
     }
 }
