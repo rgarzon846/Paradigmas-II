@@ -85,7 +85,7 @@ public class Prestamo
     }
     
     void devolverLibro(){
-        prestamo = false;
+        //prestamo = false;
         actualizarEstado();
         System.out.println("El libro prestado al id: " + usuario.getId() + "se ha devuelto con exito");
         devolver = true;
