@@ -29,6 +29,14 @@ public class Prestamo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
+     private void actualizarEstado(){
+        if(libro.getEstado().equals("Disponible")){
+            libro.setEstado("Prestado");
+        }else{
+            libro.setEstado("Disponible");
+        }
+    }
+    
     public 
     
     boolean solicitarPrestamo()
@@ -37,10 +45,8 @@ public class Prestamo
         verificarEstado();
         if(verificarEstado()){
             return true;
-            actualizarEstado();
         }else{
             return false;
-            actualizarEstado();
         }
         
     }
@@ -54,19 +60,18 @@ public class Prestamo
         }
     }
     
-    private void actualizarEstado(){
-        if(libro.getEstado().equals("Disponible")){
-            libro.setEstado("Prestado");
-        }else{
-            libro.setEstado("Disponible");
-        }
-    }
-    
-    public void resultadoOperacion(){
+    void resultadoOperacion(){
         if(solicitarPrestamo()){
             System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());
+            actualizarEstado();            
         }else{
             System.out.println("El libro no se encuentra disponible");
         }
     }
+    
+    void devolverLibro(){
+        actualizarEstado();
+        System.out.println("El libro prestado al id: " + usuario.getId() + "se ha devuelto con exito");
+    }
+    
 }
