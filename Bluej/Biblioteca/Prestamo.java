@@ -11,6 +11,8 @@ public class Prestamo
     private 
     Usuario usuario;
     Libro libro;
+    boolean prestamo;
+    boolean devolver;
 
     /**
      * Constructor for objects of class Prestamo
@@ -21,6 +23,8 @@ public class Prestamo
         // initialise instance variables
         libro = new Libro("Caperucita", "Charles", "Disponible");
         usuario = new Usuario("Juan");
+        prestamo = false;
+        devolver = false;
     }
 
     /**
@@ -32,6 +36,8 @@ public class Prestamo
      private void actualizarEstado(){
         if(libro.getEstado().equals("Disponible")){
             libro.setEstado("Prestado");
+            actualizarEstado(); 
+            prestamo = true;
         }else{
             libro.setEstado("Disponible");
         }
@@ -61,10 +67,10 @@ public class Prestamo
     }
     
     void resultadoOperacion(){
-        if(solicitarPrestamo()){
-            System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());
-            actualizarEstado();            
-        }else{
+        if(prestamo){
+            System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());         
+        }else if(devolver){
+            
             System.out.println("El libro no se encuentra disponible");
         }
     }
