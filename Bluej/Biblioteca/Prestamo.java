@@ -45,12 +45,9 @@ public class Prestamo
     
     void solicitarPrestamo()
     {
-        // put your code here
-        devolver = false;
-        verificarEstado();
         if(verificarEstado()){
             actualizarEstado(); 
-            
+            prestamo = true;
         }else{
             prestamo = false;
         }
@@ -67,10 +64,11 @@ public class Prestamo
     }
     
     private void resultadoOperacionPrestamo(){
-        if(verificarEstado() == false){
+        if(prestamo){
             System.out.println("El prestamo se ha realizado con exito! id: " + usuario.getId());
+            prestamo = false;
         }else{
-            System.out.println("No se ha solicitado un prestamo");
+            System.out.println("Libro no disponible");
         }
         
     }
@@ -86,9 +84,12 @@ public class Prestamo
     
     public void devolverLibro(){
         //prestamo = false;
-        prestamo = false;
+        if(verificarEstado() == false){
         actualizarEstado();
         devolver = true;
+    }else{
+        devolver = false;
+    }
         resultadoOperacionDevolver();
     }
     
