@@ -18,11 +18,20 @@ public class Prestamo
      * Constructor for objects of class Prestamo
      */
     public 
+    
     Prestamo()
     {
         // initialise instance variables
         libro = new Libro("Caperucita", "Charles", "Disponible");
         usuario = new Usuario("Juan");
+        prestamo = false;
+        devolver = false;
+    }
+    Prestamo(Usuario usuario, Libro libro)
+    {
+        // initialise instance variables
+        this.libro = libro;
+        this.usuario = usuario;
         prestamo = false;
         devolver = false;
     }
@@ -33,7 +42,7 @@ public class Prestamo
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-     private void actualizarEstado(){
+    private void actualizarEstado(){
         if(libro.getEstado().equals("Disponible")){
             libro.setEstado("Prestado");
         }else{
