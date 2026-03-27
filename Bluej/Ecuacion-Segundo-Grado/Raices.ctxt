@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Raices
+comment0.text=\n\ Write\ a\ description\ of\ class\ Raices\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=a\ b\ c
+comment1.target=Raices(float,\ float,\ float)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Raices\n
+comment2.params=
+comment2.target=void\ obtenerRaices()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment3.params=
+comment3.target=void\ obtenerRaiz()
+comment4.params=
+comment4.target=double\ getDiscriminante()
+comment5.params=
+comment5.target=boolean\ tieneRaices()
+comment6.params=
+comment6.target=boolean\ tieneRaiz()
+comment7.params=r1\ r2
+comment7.target=boolean\ Calcular(double,\ double)
+numComments=8
