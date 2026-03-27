@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Valores
+comment0.text=\n\ Write\ a\ description\ of\ class\ Valores\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=r1\ r2
+comment1.target=Valores(double,\ double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Valores\n
+comment2.params=r1
+comment2.target=Valores(double)
+comment3.params=
+comment3.target=double\ getR1()
+comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment4.params=
+comment4.target=double\ getR2()
+comment5.params=r1
+comment5.target=void\ setR1(double)
+comment6.params=r2
+comment6.target=void\ setR2(double)
+numComments=7

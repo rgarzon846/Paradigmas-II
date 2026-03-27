@@ -2,7 +2,7 @@
 comment0.target=Raices
 comment0.text=\n\ Write\ a\ description\ of\ class\ Raices\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=a\ b\ c
-comment1.target=Raices(float,\ float,\ float)
+comment1.target=Raices(double,\ double,\ double)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Raices\n
 comment2.params=
 comment2.target=void\ obtenerRaices()
@@ -15,6 +15,6 @@ comment5.params=
 comment5.target=boolean\ tieneRaices()
 comment6.params=
 comment6.target=boolean\ tieneRaiz()
-comment7.params=r1\ r2
-comment7.target=boolean\ Calcular(double,\ double)
+comment7.params=valores
+comment7.target=boolean\ Calcular(Valores)
 numComments=8

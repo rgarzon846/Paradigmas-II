@@ -35,14 +35,16 @@ public class Raices
     {
         // put your code here
         Valores valores = new Valores(0, 0);
-        Calcular(
-        
+        if(Calcular(valores)){
+            System.out.println("Las raices son: " + valores.getR1() + " y " + valores.getR2());
+        }
     }
     
     void obtenerRaiz(){
-        double r1 = 0;
-        double r2 = 0;
-        Calcular(r1, r2);
+        Valores valores = new Valores(0);
+        if(Calcular(valores)){
+            System.out.println("La unica solucion posible es: " + valores.getR1());
+        }
     }
     
     private double getDiscriminante(){
@@ -65,14 +67,15 @@ public class Raices
         }
     }
     
-    private void Calcular(Valores valores){
+    private boolean Calcular(Valores valores){
         if(tieneRaices()){
-            r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            Valores valores = new Valores(r1, r2);
+            double r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
+            double r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
+            valores.setR1(r1);
+            valores.setR2(r2);
         }else if(tieneRaiz()){
-            r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
-            Valores valores = new Valores(r1);
+            double r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
+            valores.setR1(r1);
         }else if((!tieneRaices()) && (!tieneRaiz())){
             System.out.println("La ecuacion no tiene soluciones");
         return false;

@@ -39,4 +39,10 @@ public class Valores
     double getR2(){
         return r2;
     }
+    void setR1(double r1){
+        this.r1 = r1;
+    }
+    void setR2(double r2){
+        this.r2 = r2;
+    }
 }
