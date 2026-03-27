@@ -65,21 +65,17 @@ public class Raices
         }
     }
     
-    private double Calcular(double r1, double r2){
+    private void Calcular(double r1, double r2){
         if(tieneRaices()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            calculoAux(r2);
-            return r1;
+            r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
+            this.r1 = r1;
+            this.r2 = r2;
         }else if(tieneRaiz()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
-            return r1;
+            this.r1 = r1;
         }else if((!tieneRaices()) && (!tieneRaiz())){
-        return "La ecuacion no tiene soluciones";
+        return false;
         }
-    }
-    
-    private double calculoAux(double r2){
-        r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-        return r2;
     }
 }
