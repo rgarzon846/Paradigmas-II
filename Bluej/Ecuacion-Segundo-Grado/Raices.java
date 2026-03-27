@@ -36,7 +36,6 @@ public class Raices
         // put your code here
         double r1 = 0;
         double r2 = 0;
-        
         Calcular(r1, r2);
     }
     
@@ -69,17 +68,18 @@ public class Raices
     private double Calcular(double r1, double r2){
         if(tieneRaices()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            return "Las raices son: " + r1 + ", " + r2;
+            calculoAux(r2);
+            return r1;
         }else if(tieneRaiz()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
-            return "La unica solucion capaz es: " + r1;
+            return r1;
         }else if((!tieneRaices()) && (!tieneRaiz())){
         return "La ecuacion no tiene soluciones";
         }
     }
     
-    private double calculoAux(double r1, double r2){
-        
+    private double calculoAux(double r2){
+        r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
+        return r2;
     }
 }
