@@ -35,14 +35,16 @@ public class Raices
     {
         // put your code here
         Valores valores = new Valores(0, 0);
-        if(Calcular(valores)){
+        if(Calcular(valores) == 1){
             System.out.println("Las raices son: " + valores.getR1() + " y " + valores.getR2());
+        }else{
+            System.out.println("La ecuacion no tiene dos raices");
         }
     }
     
     void obtenerRaiz(){
         Valores valores = new Valores(0);
-        if(Calcular(valores)){
+        if(Calcular(valores) == 2){
             System.out.println("La unica solucion posible es: " + valores.getR1());
         }
     }
@@ -67,19 +69,20 @@ public class Raices
         }
     }
     
-    private boolean Calcular(Valores valores){
+    private int Calcular(Valores valores){
         if(tieneRaices()){
             double r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
             double r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
             valores.setR1(r1);
             valores.setR2(r2);
+            return 1;
         }else if(tieneRaiz()){
             double r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
             valores.setR1(r1);
+            return 2;
         }else if((!tieneRaices()) && (!tieneRaiz())){
             System.out.println("La ecuacion no tiene soluciones");
-        return false;
+        return 3;
         }
-        return true;
     }
 }
