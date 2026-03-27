@@ -16,5 +16,5 @@ comment5.target=boolean\ tieneRaices()
 comment6.params=
 comment6.target=boolean\ tieneRaiz()
 comment7.params=valores
-comment7.target=boolean\ Calcular(Valores)
+comment7.target=int\ Calcular(Valores)
 numComments=8

@@ -46,6 +46,8 @@ public class Raices
         Valores valores = new Valores(0);
         if(Calcular(valores) == 2){
             System.out.println("La unica solucion posible es: " + valores.getR1());
+        }else{
+            System.out.println("La ecuacion no tiene una sola solucion");
         }
     }
     
@@ -81,8 +83,8 @@ public class Raices
             valores.setR1(r1);
             return 2;
         }else if((!tieneRaices()) && (!tieneRaiz())){
-            System.out.println("La ecuacion no tiene soluciones");
-        return 3;
+            return 0;
         }
+        return 4;
     }
 }
