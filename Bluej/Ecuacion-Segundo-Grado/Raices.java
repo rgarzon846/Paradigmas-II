@@ -34,9 +34,9 @@ public class Raices
     void obtenerRaices()
     {
         // put your code here
-        double r1 = 0;
-        double r2 = 0;
-        Calcular(r1, r2);
+        Valores valores = new Valores(0, 0);
+        Calcular(
+        
     }
     
     void obtenerRaiz(){
@@ -65,17 +65,18 @@ public class Raices
         }
     }
     
-    private void Calcular(double r1, double r2){
+    private void Calcular(Valores valores){
         if(tieneRaices()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
             r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
-            this.r1 = r1;
-            this.r2 = r2;
+            Valores valores = new Valores(r1, r2);
         }else if(tieneRaiz()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));    
-            this.r1 = r1;
+            Valores valores = new Valores(r1);
         }else if((!tieneRaices()) && (!tieneRaiz())){
+            System.out.println("La ecuacion no tiene soluciones");
         return false;
         }
+        return true;
     }
 }

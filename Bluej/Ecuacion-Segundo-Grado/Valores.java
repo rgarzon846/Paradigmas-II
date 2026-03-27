@@ -15,11 +15,15 @@ public class Valores
     /**
      * Constructor for objects of class Valores
      */
-    public Valores()
+    public 
+    Valores(double r1, double r2)
     {
         // initialise instance variables
-        r1 = 0;
-        
+       this.r1 = r1;
+       this.r2 = r2;
+    }
+    Valores(double r1){
+        this.r1 = r1;
     }
 
     /**
@@ -28,9 +32,11 @@ public class Valores
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public 
+    double getR1(){
+        return r1;
+    }
+    double getR2(){
+        return r2;
     }
 }
