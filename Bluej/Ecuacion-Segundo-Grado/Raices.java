@@ -16,7 +16,7 @@ public class Raices
     /**
      * Constructor for objects of class Raices
      */
-    public Raices(float a, float b, float c)
+    public Raices(double a, double b, double c)
     {
         // initialise instance variables
         this.a = a;
@@ -66,7 +66,7 @@ public class Raices
         }
     }
     
-    private String Calcular(double r1, double r2){
+    private double Calcular(double r1, double r2){
         if(tieneRaices()){
             r1 = ((-b + Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
             r2 = ((-b - Math.sqrt((Math.pow(b, 2) - (4*a*c))))/(2*a));
@@ -77,5 +77,9 @@ public class Raices
         }else if((!tieneRaices()) && (!tieneRaiz())){
         return "La ecuacion no tiene soluciones";
         }
+    }
+    
+    private double calculoAux(double r1, double r2){
+        
     }
 }
