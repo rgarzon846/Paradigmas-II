@@ -35,6 +35,9 @@ public class Maquina
     void pagarViaje()
     {
         // put your code here
-        System;
+        System.out.println("De que monto es el billete con el que desea pagar?:");
+        System.out.println("a. 50\nb. 100\nc. 500\nd. 1000");
+        dinero_ingresado = sc.nextInt();
     }
+    
 }
