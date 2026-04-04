@@ -12,7 +12,7 @@ public class Persona
     // instance variables - replace the example below with your own
     private 
     String nombre;
-    long dni;
+    int dni;
     int edad;
     float peso;
     char sexo;
@@ -41,7 +41,7 @@ public class Persona
         peso = 0;
         altura = 0;
     }
-    Persona(String nombre, long dni, int edad, float peso, char sexo, float altura){
+    Persona(String nombre, int dni, int edad, float peso, char sexo, float altura){
         this.nombre = nombre;
         this.dni = dni;
         this.edad = edad;
@@ -85,9 +85,9 @@ public class Persona
             this.sexo = 'H';
         }
     }
-    long generarDni(long dni){
+    int generarDni(int dni){
         Random random = new Random();
-        dni = 10000000 + (long)(random.nextDouble()*(99999999 - 10000000 + 1));
+        dni = random.nextInt((99999999 - 10000000)) +1;
         return dni;
     }
     public
