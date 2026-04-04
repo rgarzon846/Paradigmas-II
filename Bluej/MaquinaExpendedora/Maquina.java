@@ -38,15 +38,13 @@ public class Maquina
     void pagarViaje()
     {
         // put your code here
+        do{
         System.out.println("De que monto es el billete con el que desea pagar?:");
         System.out.println("50\n100\n500\n1000");
         dinero_ingresado = sc.nextInt();
         System.out.println("Hasta el momento se han ingresado: " + llevarCuenta(dinero_ingresado));
-        if(habilitacion(llevarCuenta(dinero_ingresado))){
+    }while(!habilitacion(suma));
             System.out.println("Ya puede emitir su ticket!");
-        }else{
-            System.out.println("Faltan ingresar: " + (destino.getValor() - llevarCuenta(dinero_ingresado)));
-        }
     }
     private
     int llevarCuenta(int dinero_ingresado){
@@ -63,7 +61,7 @@ public class Maquina
     }
     public
     void emitirTicket(){
-        if(habilitacion(llevarCuenta(dinero_ingresado))){
+        if(habilitacion(suma)){
             System.out.println("###############");
             System.out.println("Trencitos Argentinos");
             System.out.println("Ticket precio: " + destino.getValor());
