@@ -38,6 +38,23 @@ public class Maquina
         System.out.println("De que monto es el billete con el que desea pagar?:");
         System.out.println("a. 50\nb. 100\nc. 500\nd. 1000");
         dinero_ingresado = sc.nextInt();
+        System.out.println("Hasta el momento se han ingresado: " + llevarCuenta(dinero_ingresado));
+        if(habilitacion(llevarCuenta(dinero_ingresado))){
+            
+        }
+    }
+    private
+    int llevarCuenta(int dinero_ingresado){
+        int suma = 0;
+        suma += dinero_ingresado;
+        return suma;
+    }
+    boolean habilitacion(int suma){
+        if(suma > destino.getValor()){
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }
