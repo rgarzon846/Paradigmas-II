@@ -87,7 +87,7 @@ public class Persona
     }
     int generarDni(int dni){
         Random random = new Random();
-        dni = random.nextInt((99999999 - 10000000)) +1;
+        dni = random.nextInt((99999999 - 10000000 + 1)) +10000000;
         return dni;
     }
     public
