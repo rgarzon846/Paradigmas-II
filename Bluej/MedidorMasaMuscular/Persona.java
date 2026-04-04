@@ -30,11 +30,11 @@ public class Persona
         sexo = "masculino";
         altura = 0;
     }
-    Persona(){
-        nombre = "Desire";
+    Persona(String nombre, int edad, String sexo){
+        this.nombre = nombre;
         dni = generarDni();
-        edad = 90;
-        sexo = "femenino";
+        this.edad = edad;
+        this.sexo = sexo;
         peso = 0;
         altura = 0;
     }
@@ -53,9 +53,26 @@ public class Persona
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    int calcularIMC()
     {
         // put your code here
-        return x + y;
+        double imc = (peso/(Math.pow(altura, 2)));
+        if(imc < 20){
+            return -1;
+        }else if(imc >= 20 && imc <= 25){
+            return 0;
+        }else if(imc > 25){
+            return 1;
+        }
+    }
+    boolean esMayorDeEdad(){
+        if(edad >= 18){
+            return true;
+        }else{
+            return false;
+        }
+        
+    
     }
 }
