@@ -5,6 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.Random;
+
 public class Persona
 {
     // instance variables - replace the example below with your own
@@ -24,15 +26,15 @@ public class Persona
     {
         // initialise instance variables
         nombre = "";
-        dni = generarDni();
+        dni = generarDni(dni);
         edad = 0;
         peso = 0;
-        sexo = "H";
+        sexo = 'H';
         altura = 0;
     }
     Persona(String nombre, int edad, char sexo){
         this.nombre = nombre;
-        dni = generarDni();
+        dni = generarDni(dni);
         this.edad = edad;
         this.sexo = sexo;
         peso = 0;
@@ -76,8 +78,11 @@ public class Persona
     private 
     void comprobarSexo(char sexo){
         if(sexo != 'H' && sexo != 'h' && sexo != 'M' && sexo != 'm'){
-            this.sexo = 'H'
+            this.sexo = 'H';
         }
     }
-    
+    long generarDni(long dni){
+        Random random = new Random();
+        dni = 
+    }
 }
