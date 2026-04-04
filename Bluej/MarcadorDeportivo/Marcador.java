@@ -5,7 +5,6 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-import java.time.Duration;
 
 public class Marcador
 {
@@ -25,9 +24,9 @@ public class Marcador
         // initialise instance variables
         visita = 0;
         local = 0;
-        long minutos = ;
         long inicio = System.currentTimeMillis();
         long ahora = 0;
+        long minutos = (ahora - inicio);
     }
 
     /**
@@ -51,12 +50,13 @@ public class Marcador
     int getLocal(){
         return local;
     }
-    long getMinutos(){
-        return minutos.toMinutes();
+    void ImprimirMinutos(){
+        ahora = System.currentTimeMillis();
+        System.out.println(minutos);
     }
     void Reiniciar(){
         visita = 0;
         local = 0;
-        minutos = Duration.ZERO;
+        minutos = 0;
     }
 }

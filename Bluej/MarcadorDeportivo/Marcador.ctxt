@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Marcador
+comment0.text=\n\ Write\ a\ description\ of\ class\ Marcador\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Marcador()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Marcador\n
@@ -13,7 +14,7 @@ comment4.target=int\ getVisita()
 comment5.params=
 comment5.target=int\ getLocal()
 comment6.params=
-comment6.target=long\ getMinutos()
+comment6.target=void\ ImprimirMinutos()
 comment7.params=
 comment7.target=void\ Reiniciar()
 numComments=8
