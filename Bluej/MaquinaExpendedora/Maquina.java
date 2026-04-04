@@ -13,6 +13,8 @@ public class Maquina
     private 
     int dinero_ingresado;
     Destino destino;
+    int suma;
+    
     Scanner sc;
     /**
      * Constructor for objects of class Maquina
@@ -22,6 +24,7 @@ public class Maquina
         // initialise instance variables
         dinero_ingresado = 0;
         destino = new Destino();
+        suma = 0;
         sc = new Scanner(System.in);
     }
 
@@ -47,7 +50,6 @@ public class Maquina
     }
     private
     int llevarCuenta(int dinero_ingresado){
-        int suma = 0;
         suma += dinero_ingresado;
         return suma;
     }
