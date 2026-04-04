@@ -37,6 +37,7 @@ public class Persona
         dni = generarDni(dni);
         this.edad = edad;
         this.sexo = sexo;
+        comprobarSexo(sexo);
         peso = 0;
         altura = 0;
     }
@@ -46,6 +47,7 @@ public class Persona
         this.edad = edad;
         this.peso = peso;
         this.sexo = sexo;
+        comprobarSexo(sexo);
         this.altura = altura;
     }
 
@@ -67,7 +69,9 @@ public class Persona
         }else if(imc > 25){
             return 1;
         }
+        return 2;
     }
+    
     boolean esMayorDeEdad(){
         if(edad >= 18){
             return true;
@@ -83,6 +87,24 @@ public class Persona
     }
     long generarDni(long dni){
         Random random = new Random();
-        dni = 
+        dni = 10000000 + (long)(random.nextDouble()*(99999999 - 10000000 + 1));
+        return dni;
     }
+    public
+    void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    void setEdad(int edad){
+        this.edad = edad;
+    }
+    void setPeso(float peso){
+        this.peso = peso;
+    }
+    void setSexo(char sexo){
+        this.sexo = sexo;
+    }
+    void setAltura(float altura){
+        this.altura = altura;
+    }
+    
 }
