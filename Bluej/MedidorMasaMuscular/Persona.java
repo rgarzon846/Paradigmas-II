@@ -8,7 +8,13 @@
 public class Peersona
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private 
+    String nombre;
+    long dni;
+    int edad;
+    float peso;
+    String sexo;
+    float altura;
 
     /**
      * Constructor for objects of class Peersona
