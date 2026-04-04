@@ -12,9 +12,7 @@ public class Marcador
     private 
     int visita;
     int local;
-    long minutos;
     long inicio;
-    long ahora;
 
     /**
      * Constructor for objects of class Marcador
@@ -50,13 +48,13 @@ public class Marcador
     int getLocal(){
         return local;
     }
-    void ImprimirMinutos(){
-        ahora = System.currentTimeMillis();
-        System.out.println(minutos);
+    long ImprimirMinutos(){
+        long ahora = System.currentTimeMillis();
+        return (ahora - inicio);
     }
     void Reiniciar(){
         visita = 0;
         local = 0;
-        minutos = 0;
+        inicio = System.currentTimeMillis();
     }
 }
