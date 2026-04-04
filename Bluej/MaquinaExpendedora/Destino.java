@@ -18,8 +18,8 @@ public class Destino
     public Destino()
     {
         // initialise instance variables
-        lugar = "Punta Cana";
-        valor = 9600;
+        lugar = "Treleu";
+        valor = 3500;
     }
 
     /**
