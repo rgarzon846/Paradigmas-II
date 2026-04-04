@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Peersona
+public class Persona
 {
     // instance variables - replace the example below with your own
     private 
@@ -19,10 +19,32 @@ public class Peersona
     /**
      * Constructor for objects of class Peersona
      */
-    public Peersona()
+    public 
+    Persona()
     {
         // initialise instance variables
-        x = 0;
+        nombre = "";
+        dni = generarDni();
+        edad = 0;
+        peso = 0;
+        sexo = "masculino";
+        altura = 0;
+    }
+    Persona(){
+        nombre = "Desire";
+        dni = generarDni();
+        edad = 90;
+        sexo = "femenino";
+        peso = 0;
+        altura = 0;
+    }
+    Persona(String nombre, long dni, int edad, float peso, String sexo, float altura){
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+        this.peso = peso;
+        this.sexo = sexo;
+        this.altura = altura;
     }
 
     /**
