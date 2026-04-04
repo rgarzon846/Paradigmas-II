@@ -13,7 +13,7 @@ public class Persona
     long dni;
     int edad;
     float peso;
-    String sexo;
+    char sexo;
     float altura;
 
     /**
@@ -27,10 +27,10 @@ public class Persona
         dni = generarDni();
         edad = 0;
         peso = 0;
-        sexo = "masculino";
+        sexo = "H";
         altura = 0;
     }
-    Persona(String nombre, int edad, String sexo){
+    Persona(String nombre, int edad, char sexo){
         this.nombre = nombre;
         dni = generarDni();
         this.edad = edad;
@@ -38,7 +38,7 @@ public class Persona
         peso = 0;
         altura = 0;
     }
-    Persona(String nombre, long dni, int edad, float peso, String sexo, float altura){
+    Persona(String nombre, long dni, int edad, float peso, char sexo, float altura){
         this.nombre = nombre;
         this.dni = dni;
         this.edad = edad;
@@ -72,7 +72,12 @@ public class Persona
         }else{
             return false;
         }
-        
-    
     }
+    private 
+    void comprobarSexo(char sexo){
+        if(sexo != 'H' && sexo != 'h' && sexo != 'M' && sexo != 'm'){
+            this.sexo = 'H'
+        }
+    }
+    
 }
