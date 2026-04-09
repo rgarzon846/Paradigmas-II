@@ -5,13 +5,13 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.*;
 public class Chat
 {
     // instance variables - replace the example below with your own
     private 
     Bot bot;
     Usuario usuario;
-    String palabra_cierre;
 
     /**
      * Constructor for objects of class Chat
@@ -21,7 +21,6 @@ public class Chat
         // initialise instance variables
         bot = new Bot();
         usuario = new Usuario();
-        palabra_cierre = "fin";
     }
 
     /**
@@ -33,7 +32,13 @@ public class Chat
     public 
     void Conversacion()
     {
-        // put your code here
-        return x + y;
+        getEntrada(usuario.getTexto());
+        while(!usuario.getTexto().equals("fin")){
+            bot.verificarPalabra(getTexto());
+        }
+    }
+    
+    HashSet<String> getEntrada(){
+                
     }
 }
