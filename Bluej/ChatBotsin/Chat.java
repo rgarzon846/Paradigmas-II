@@ -37,10 +37,9 @@ public class Chat
             bot.verificarPalabra(getTexto());
         }
     }
-    
     HashSet<String> getEntrada(){
                 String linea = lector.lineaSiguiente().trim().toLowerCase();
-                String[] arregloDepalabras = linea.split();
+                String[] arregloDepalabras = linea.split(" ");
                 HashSet<String> palabras = new HashSet<String>();
                 for(String palabra : arregloDePalabras){
                     palabras.add(palabra);
