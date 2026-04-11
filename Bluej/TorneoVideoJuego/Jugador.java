@@ -19,8 +19,13 @@ public class Jugador
      */
     public Jugador()
     {
-        // initialise instance variables
+        /**
+         * Nombre del jugador inscripto (Ej. Juan)
+           */
         nombre = "";
+        /**
+         * Dni del jugador inscripto
+        */
         dni = 0;
         puntaje = 0;
         cant_partidas = 0;

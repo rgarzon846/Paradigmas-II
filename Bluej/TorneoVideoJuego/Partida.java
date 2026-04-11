@@ -1,33 +1,86 @@
 
+import java.util.Random;
 /**
- * Write a description of class Partida here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Representa una partida entre dos jugadores del torneo.
+ * Genera un resultado aleatorio y actualiza las estadísticas.
+ *
+ * @author Farid
+ * @version 1.0
  */
-public class Partida
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Partida {
+    private Jugador jugador1;
+    private Jugador jugador2;
+    private String ganador;
 
     /**
-     * Constructor for objects of class Partida
+     * Constructor de Partida. El resultado se inicializa como empate por defecto
+     *
+     * @param jugador1 Primer jugador de la partida.
+     * @param jugador2 Segundo jugador de la partida.
      */
-    public Partida()
-    {
-        // initialise instance variables
-        x = 0;
+    public Partida(Jugador jugador1, Jugador jugador2) {
+        this.jugador1 = jugador1;
+        this.jugador2 = jugador2;
+        this.ganador = "Empate";
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Selecciona aleatoriamente el ganador de la partida.
+     * 0 = empate, 1 = jugador1, 2 = jugador2.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void seleccionarGanador() {
+    Random rand = new Random();
+    int resultado = rand.nextInt(3); // 0, 1 o 2
+    if (resultado == 1) {
+        ganador = jugador1.getNombre();
+    } else if (resultado == 2) {
+        ganador = jugador2.getNombre();
     }
+}
+
+    /**
+     * Suma 1 punto al jugador ganador.
+     * En caso de empate no se suman puntos.
+     */
+    public void actualizarPuntos() {
+        if (ganador.equals(jugador1.getNombre())) {
+            jugador1.modificarPuntaje(1);
+        } else if (ganador.equals(jugador2.getNombre())) {
+            jugador2.modificarPuntaje();
+        }
+        /**
+        * Suma 1 partida jugada a cada jugador
+        */
+        jugador1.modificarContPartidas(1);
+        jugador2.modificarContPartidas(1);
+    }
+
+    /**
+     * Retorna el nombre del ganador o "Empate".
+     *
+     * @return String con el resultado de la partida.
+     */
+    public String getGanador() {
+        return ganador;
+    }
+
+    /**
+     * Retorna el primer jugador de la partida.
+     *
+     * @return jugador1
+     */
+    public Jugador getJugador1() {
+        return jugador1;
+    }
+
+    /**
+     * Retorna el segundo jugador de la partida.
+     *
+     * @return jugador2
+     */
+    public Jugador getJugador2() {
+        return jugador2;
+    }
+
+
 }
