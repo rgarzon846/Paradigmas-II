@@ -13,7 +13,6 @@ public class Bot
     private 
     HashMap<String, String> rtas_automaticas;
     ArrayList<String> rtas_defecto;
-    Chat chat;
 
     /**
      * Constructor for objects of class Bot
@@ -22,7 +21,7 @@ public class Bot
     {
         // initialise instance variables
         rtas_automaticas = new HashMap<>();
-        rtas_defecto = new ArrayList<String>();  
+        rtas_defecto = new ArrayList<>();  
     }
 
     /**
