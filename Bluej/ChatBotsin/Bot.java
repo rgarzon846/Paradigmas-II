@@ -32,7 +32,7 @@ public class Bot
      * @return     the sum of x and y 
      */
     public 
-    void vrificarPalabra(HashSet<String> palabras)
+    void verificarPalabra(HashSet<String> palabras)
     {
         if(rtas_automaticas.containsKey(palabras)){
             System.out.println(rtas_automaticas.get(palabras));

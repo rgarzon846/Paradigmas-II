@@ -12,6 +12,7 @@ public class Chat
     private 
     Bot bot;
     Usuario usuario;
+    Scanner sc;
 
     /**
      * Constructor for objects of class Chat
@@ -21,6 +22,7 @@ public class Chat
         // initialise instance variables
         bot = new Bot();
         usuario = new Usuario();
+        sc = new Scanner(System.in);
     }
 
     /**
@@ -30,15 +32,17 @@ public class Chat
      * @return     the sum of x and y 
      */
     public 
-    void Conversacion()
+    void iniciarChat()
     {
         Normalizacion();
         while(!Normalizacion().equals("fin")){
+            System.out.println("Ingrese su consulta: ");
+            usuario.setTexto(sc.nextLine());
             bot.verificarPalabra(Normalizacion());
         }
     }
     
-    HashSet<String> Normalizacion(){
+    private HashSet<String> Normalizacion(){
                 String linea = usuario.getTexto().trim().toLowerCase();
                 String[] arregloDePalabras = linea.split(" ");
                 
