@@ -13,6 +13,7 @@ public class Bot
     private 
     HashMap<String, String> rtas_automaticas;
     ArrayList<String> rtas_defecto;
+    Chat chat;
 
     /**
      * Constructor for objects of class Bot
@@ -21,9 +22,7 @@ public class Bot
     {
         // initialise instance variables
         rtas_automaticas = new HashMap<>();
-        rtas_defecto
-        
-        
+        rtas_defecto = new ArrayList<String>();  
     }
 
     /**
@@ -32,9 +31,8 @@ public class Bot
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    private HashMap<String, String> verificarPalabra(HashSet<String> palabras)
     {
-        // put your code here
-        return x + y;
+        
     }
 }
