@@ -40,11 +40,14 @@ public class Bot
             seleccionarRtaDefecto();
         }
     }
-    void seleccionarRtaDefecto(){
+    private void seleccionarRtaDefecto(){
         Random indice;
         indice = new Random();
         int nro_indice = indice.nextInt(2);
-        
+        if(nro_indice < 0){}
+        else if(nro_indice < rtas_defecto.size()){
+            System.out.println(rtas_defecto.get(nro_indice));
+        }else{}
     }
     private void agregarRtasAutomaticas(){
         rtas_automaticas.put("error", "Deberias leer el codigo");
