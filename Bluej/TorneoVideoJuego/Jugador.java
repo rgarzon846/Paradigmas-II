@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Jugador here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Representa un jugador dentro del torneo.
+ * Permite almacenar su nombre, puntaje y partidas jugadas.
+ * @author Rocio 
+ * @version 1.0
  */
 public class Jugador
 {
@@ -15,7 +15,7 @@ public class Jugador
     int cant_partidas;
 
     /**
-     * Constructor for objects of class Jugador
+     * Constructor para el objeto de la clase Jugador
      */
     public Jugador()
     {
