@@ -63,8 +63,8 @@ public class Torneo
         int jugador2 = random.nextInt(n);
         while(jugador1 == jugador2)jugador2 = random.nextInt(n);
         
-        
-        historial.add(new Partida(jugadores.get(jugador1), jugadores.get(jugador2)));
+        Partida partida = new Partida(jugadores.get(jugador1), jugadores.get(jugador2));
+        historial.add(partida);
         historial.get(historial.size()).seleccionarGanador();
     }   
 
