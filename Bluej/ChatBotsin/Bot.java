@@ -31,13 +31,20 @@ public class Bot
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void vrificarPalabra(HashSet<String> palabras)
+    public 
+    void vrificarPalabra(HashSet<String> palabras)
     {
         if(rtas_automaticas.containsKey(palabras)){
             System.out.println(rtas_automaticas.get(palabras));
         }else{
-            
+            seleccionarRtaDefecto();
         }
+    }
+    void seleccionarRtaDefecto(){
+        Random indice;
+        indice = new Random();
+        int nro_indice = indice.nextInt(2);
+        
     }
     private void agregarRtasAutomaticas(){
         rtas_automaticas.put("error", "Deberias leer el codigo");
@@ -49,4 +56,5 @@ public class Bot
         rtas_defecto.add("Pregunta al bot de marketing");
         rtas_defecto.add("Mejor compra otro equipo");
     }
+    
 }
