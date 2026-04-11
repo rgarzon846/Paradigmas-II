@@ -17,7 +17,15 @@ public class Jugador
     /**
      * Constructor para el objeto de la clase Jugador
      */
-    public Jugador(String nombre, int dni)
+    public 
+    Jugador(){
+        nombre = "";
+        dni = 0;
+        puntaje = 0;
+        cant_partidas = 0;
+    }
+    
+    Jugador(String nombre, int dni)
     {
         this.nombre = nombre;
         this.dni = dni;

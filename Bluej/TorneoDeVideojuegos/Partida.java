@@ -10,7 +10,6 @@ public class Partida
 {
     // instance variables - replace the example below with your own
     private 
-    ArrayList<String> jugadores;
     Jugador ganador;
     String nombre_juego;
     Jugador jugador1;
@@ -18,12 +17,14 @@ public class Partida
     /**
      * Constructor for objects of class Partida
      */
-    public Partida()
+    public Partida(Jugador jugador1, Jugador jugador2)
     {
         // initialise instance variables
         
         ganador = new Jugador();
         nombre_juego = " ";
+        this.jugador1 = jugador1;
+        this.jugador2 = jugador2;
     }
 
     /**
