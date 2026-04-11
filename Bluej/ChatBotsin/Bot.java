@@ -11,7 +11,7 @@ public class Bot
 {
     // instance variables - replace the example below with your own
     private 
-    HashMap<String, Integer> rtas_automaticas;
+    HashMap<String, String> rtas_automaticas;
     ArrayList<String> rtas_defecto;
 
     /**
@@ -21,7 +21,9 @@ public class Bot
     {
         // initialise instance variables
         private
-        rtas_automatica.put();
+        rtas_automaticas = new HashMap();
+        
+        
     }
 
     /**
