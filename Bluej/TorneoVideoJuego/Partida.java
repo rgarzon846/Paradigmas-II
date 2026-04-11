@@ -8,8 +8,7 @@ import java.util.Random;
  * @version 1.0
  */
 public class Partida {
-    private Jugador jugador1;
-    private Jugador jugador2;
+    A
     private String ganador;
 
     /**
