@@ -19,15 +19,16 @@ public class Torneo
     public void AgregarJugadores(){
         String nombre = " ";
         int dni = 0;
-        
+        nombre = teclado.nextLine();
+        dni = teclado.nextInt();
         Jugador jugador = new Jugador(nombre, dni);
         jugadores.add(jugador);   
     }
 
     public void listarJugadores(){
-        System.out.println(" Nombre " + " Dni " + " Puntaje ");
+        System.out.println(" Nombre " + " Dni " + " Puntaje " + " Partidas ");
         for(Jugador j : jugadores){
-            System.out.println(" " + j.getNombre() + " " + j.getDni());
+            System.out.println(" " + j.getNombre() + " " + j.getDni() + " " + j.getCant_partidas());
         }
     }
 
@@ -46,10 +47,10 @@ public class Torneo
         }
 
         int cont = 0;
-        System.out.println(" Nombre " + " Dni " + " Puntaje ");
+        System.out.println(" Nombre " + " Dni " + " Puntaje " + " Partidas ");
         for(Jugador j : jugadores){
             cont++;
-            System.out.println(cont + ")" + " " + j.getNombre() + " " + j.getDni());
+            System.out.println(cont + ")" + " " + j.getNombre() + " " + j.getDni() + " " + j.getCant_partidas());
         }
     }
 
@@ -60,8 +61,9 @@ public class Torneo
 
         int jugador1 = random.nextInt(n);
         int jugador2 = random.nextInt(n);
-        while(jugador1 == jugador2) jugador2 = random.nextInt(n);
-
+        while(jugador1 == jugador2)jugador2 = random.nextInt(n);
+        
+        
         historial.add(new Partida(jugadores.get(jugador1), jugadores.get(jugador2)));
         historial.get(historial.size()).seleccionarGanador();
     }   
