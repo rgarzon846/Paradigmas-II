@@ -35,4 +35,12 @@ public class Bot
     {
         
     }
+    private void agregarRtasAutomaticas(){
+        rtas_automaticas.put("error", "Deberias leer el codigo");
+        rtas_automaticas.put("compila", "Si compila no preguntes");
+        rtas_automaticas.put("pantalla", "Mucho mejor oled que leds normales");
+    }
+    private void agregarRtasDefecto(){
+        
+    }
 }
