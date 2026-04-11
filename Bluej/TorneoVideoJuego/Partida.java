@@ -1,5 +1,5 @@
 
-import java.util.Random;
+import java.util.*;
 /**
  * Representa una partida entre dos jugadores del torneo.
  * Genera un resultado aleatorio y actualiza las estadísticas.
@@ -8,8 +8,9 @@ import java.util.Random;
  * @version 1.0
  */
 public class Partida {
-    A
-    private String ganador;
+    private 
+    ArrayList<String> jugadores;
+    S;
 
     /**
      * Constructor de Partida. El resultado se inicializa como empate por defecto
