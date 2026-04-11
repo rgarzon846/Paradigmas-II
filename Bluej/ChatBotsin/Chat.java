@@ -32,14 +32,16 @@ public class Chat
     public 
     void Conversacion()
     {
-        getEntrada();
-        while(!usuario.getTexto().equals("fin")){
-            bot.verificarPalabra(getTexto());
+        Normalizacion();
+        while(!Normalizacion().equals("fin")){
+            bot.verificarPalabra(Normalizacion());
         }
     }
-    HashSet<String> getEntrada(){
-                String linea = lector.lineaSiguiente().trim().toLowerCase();
-                String[] arregloDepalabras = linea.split(" ");
+    
+    HashSet<String> Normalizacion(){
+                String linea = usuario.getTexto().trim().toLowerCase();
+                String[] arregloDePalabras = linea.split(" ");
+                
                 HashSet<String> palabras = new HashSet<String>();
                 for(String palabra : arregloDePalabras){
                     palabras.add(palabra);

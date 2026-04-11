@@ -5,10 +5,12 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.*;
+
 public class Bot
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private ;
 
     /**
      * Constructor for objects of class Bot
