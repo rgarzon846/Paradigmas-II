@@ -46,13 +46,13 @@ public class Partida {
         if (ganador.equals(jugador1.getNombre())) {
             jugador1.modificarPuntaje(1);
         } else if (ganador.equals(jugador2.getNombre())) {
-            jugador2.modificarPuntaje();
+            jugador2.modificarPuntaje(1);
         }
         /**
         * Suma 1 partida jugada a cada jugador
         */
-        jugador1.modificarContPartidas(1);
-        jugador2.modificarContPartidas(1);
+        jugador1.modificarCant_partidas(1);
+        jugador2.modificarCant_partidas(1);
     }
 
     /**

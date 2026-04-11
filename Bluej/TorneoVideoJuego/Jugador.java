@@ -17,16 +17,10 @@ public class Jugador
     /**
      * Constructor para el objeto de la clase Jugador
      */
-    public Jugador()
+    public Jugador(String nombre, int dni)
     {
-        /**
-         * Nombre del jugador inscripto (Ej. Juan)
-           */
-        nombre = "";
-        /**
-         * Dni del jugador inscripto
-        */
-        dni = 0;
+        this.nombre = nombre;
+        this.dni = dni;
         puntaje = 0;
         cant_partidas = 0;
     }
