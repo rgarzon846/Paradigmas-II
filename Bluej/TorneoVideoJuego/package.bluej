@@ -1,12 +1,12 @@
 #BlueJ package file
-dependency1.from=Torneo
+dependency1.from=Partida
 dependency1.to=Jugador
 dependency1.type=UsesDependency
 dependency2.from=Torneo
-dependency2.to=Partida
+dependency2.to=Jugador
 dependency2.type=UsesDependency
-dependency3.from=Partida
-dependency3.to=Jugador
+dependency3.from=Torneo
+dependency3.to=Partida
 dependency3.type=UsesDependency
 editor.fx.0.height=1048
 editor.fx.0.width=1854

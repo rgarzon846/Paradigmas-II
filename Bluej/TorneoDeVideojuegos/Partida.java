@@ -13,14 +13,15 @@ public class Partida
     ArrayList<String> jugadores;
     Jugador ganador;
     String nombre_juego;
-
+    Jugador jugador1;
+    Jugador jugador2;
     /**
      * Constructor for objects of class Partida
      */
     public Partida()
     {
         // initialise instance variables
-        jugadores = new ArrayList<>();
+        
         ganador = new Jugador();
         nombre_juego = " ";
     }
@@ -36,6 +37,10 @@ public class Partida
     {
         // put your code here
         this.nombre_juego = nombre_juego;
+    }
+    void asignarPuntajes(){
+        Random jugador = new Random();
+        
     }
     
 }
