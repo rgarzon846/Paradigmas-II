@@ -17,7 +17,7 @@ public class Partida
     /**
      * Constructor for objects of class Partida
      */
-    public Partida(Jugador jugador1, Jugador jugador2)
+    public Partida(Jugador jugador1, Jugador jugador2, String nombre_juego)
     {
         // initialise instance variables
         
