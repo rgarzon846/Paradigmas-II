@@ -5,12 +5,14 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-
+import java.util.*;
 public class Partida
 {
     // instance variables - replace the example below with your own
     private 
-    A;
+    ArrayList<String> jugadores;
+    Jugador ganador;
+    String nombre_juego;
 
     /**
      * Constructor for objects of class Partida
@@ -18,7 +20,9 @@ public class Partida
     public Partida()
     {
         // initialise instance variables
-        x = 0;
+        jugadores = new ArrayList<>();
+        ganador = new Jugador();
+        nombre_juego = " ";
     }
 
     /**
@@ -27,9 +31,11 @@ public class Partida
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    void setNombre_juego(String nombre_juego)
     {
         // put your code here
-        return x + y;
+        this.nombre_juego = nombre_juego;
     }
+    
 }
