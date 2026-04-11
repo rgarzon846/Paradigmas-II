@@ -22,6 +22,8 @@ public class Bot
         // initialise instance variables
         rtas_automaticas = new HashMap<>();
         rtas_defecto = new ArrayList<>();  
+        agregarRtasDefecto();
+        agregarRtasAutomaticas();
     }
 
     /**

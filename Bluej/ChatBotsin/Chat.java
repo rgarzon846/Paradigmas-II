@@ -35,7 +35,7 @@ public class Chat
     void iniciarChat()
     {
         Normalizacion();
-        while(!Normalizacion().equals("fin")){
+        while(Normalizacion().equals("fin") != true){
             System.out.println("Ingrese su consulta: ");
             usuario.setTexto(sc.nextLine());
             bot.verificarPalabra(Normalizacion());
