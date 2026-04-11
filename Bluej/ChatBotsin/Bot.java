@@ -10,7 +10,9 @@ import java.util.*;
 public class Bot
 {
     // instance variables - replace the example below with your own
-    private ;
+    private 
+    HashMap<String, Integer> rtas_automaticas;
+    ArrayList<String> rtas_defecto;
 
     /**
      * Constructor for objects of class Bot
@@ -18,7 +20,8 @@ public class Bot
     public Bot()
     {
         // initialise instance variables
-        x = 0;
+        private
+        rtas_automatica.put();
     }
 
     /**
