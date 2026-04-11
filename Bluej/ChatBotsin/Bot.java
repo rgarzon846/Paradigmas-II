@@ -31,9 +31,13 @@ public class Bot
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    private HashMap<String, String> verificarPalabra(HashSet<String> palabras)
+    public void vrificarPalabra(HashSet<String> palabras)
     {
-        
+        if(rtas_automaticas.containsKey(palabras)){
+            System.out.println(rtas_automaticas.get(palabras));
+        }else{
+            
+        }
     }
     private void agregarRtasAutomaticas(){
         rtas_automaticas.put("error", "Deberias leer el codigo");
@@ -41,6 +45,8 @@ public class Bot
         rtas_automaticas.put("pantalla", "Mucho mejor oled que leds normales");
     }
     private void agregarRtasDefecto(){
-        
+        rtas_defecto.add("No tengo idea de lo que me estas hablando");
+        rtas_defecto.add("Pregunta al bot de marketing");
+        rtas_defecto.add("Mejor compra otro equipo");
     }
 }
