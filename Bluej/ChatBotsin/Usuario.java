@@ -5,10 +5,11 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class Usuario
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String texto;
 
     /**
      * Constructor for objects of class Usuario
@@ -16,7 +17,7 @@ public class Usuario
     public Usuario()
     {
         // initialise instance variables
-        x = 0;
+        texto = "";
     }
 
     /**
@@ -25,9 +26,13 @@ public class Usuario
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    void setTexto(String texto)
     {
         // put your code here
-        return x + y;
+        this.texto = texto;
+    }
+    String getTexto(){
+        return texto;
     }
 }
