@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Jugador
+comment0.text=\n\ Write\ a\ description\ of\ class\ Jugador\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Jugador()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Jugador\n
+comment2.params=nombre
+comment2.target=void\ setNombre(java.lang.String)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment3.params=dni
+comment3.target=void\ setDni(int)
+comment4.params=
+comment4.target=java.lang.String\ getNombre()
+comment5.params=
+comment5.target=int\ getDni()
+comment6.params=
+comment6.target=int\ getPuntaje()
+comment7.params=
+comment7.target=int\ getCant_partidas()
+comment8.params=puntaje
+comment8.target=void\ modificarPuntaje(int)
+comment9.params=cant_partidas
+comment9.target=void\ modificarCant_partidas(int)
+numComments=10
