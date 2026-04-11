@@ -20,8 +20,8 @@ public class Bot
     public Bot()
     {
         // initialise instance variables
-        private
-        rtas_automaticas = new HashMap();
+        rtas_automaticas = new HashMap<>();
+        rtas_defecto
         
         
     }
