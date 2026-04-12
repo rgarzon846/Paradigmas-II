@@ -11,6 +11,7 @@ public class Competencia {
     private ArrayList<Jugador> jugadores;
     private ArrayList<Partida> partidas;
     private String nombre_juego;
+    private Jugador ganador_de_competencia;
     int rondas;
 
     /**
@@ -23,12 +24,14 @@ public class Competencia {
         this.partidas = new ArrayList<>();
         this.nombre_juego = nombre_juego;
         this.rondas = rondas;
+        ganador_de_competencia = new Jugador();
     }
 
     /**
      * Ejecuta la lógica de las partidas por rondas hasta hallar un ganador.
      */
   public void realizarPartidas(){
+        reiniciarEliminado();
         Random random = new Random();
         Partida p;
         int indice1;
@@ -81,18 +84,25 @@ public class Competencia {
             j.setEmparejado(false);
         }
     }
+    private void reiniciarEliminado() {
+        for (Jugador j : jugadores) {
+            j.setEliminado(false);
+        }
+    } 
     
     /**
      * Busca en la lista al único jugador que no ha sido eliminado.
      * @return El objeto {@link Jugador} ganador.
      */
-    public Jugador getGanadorCompetencia() {
+    public void setGanadorCompetencia() {
         for (Jugador p : jugadores) {
             if (!p.getEliminado()) {
-                return p; // Retornamos apenas lo encontramos
+                this.ganador_de_competencia = p; // Retornamos apenas lo encontramos
             }
         }
-        return null; 
+    }
+    public Jugador getGanadorCompetencia(){
+        return ganador_de_competencia;
     }
 
     /**

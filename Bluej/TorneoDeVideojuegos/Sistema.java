@@ -95,11 +95,8 @@ public class Sistema
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         terminal.nextLine();
         nombre_juego = terminal.nextLine();
-        Competencia competencia = new Competencia(nombre_juego, copiaJugadores(), cant_rondas);
+        Competencia competencia = new Competencia(nombre_juego, jugadores, cant_rondas);
         competencia.realizarPartidas();
-        for(Jugador j : competencia.getListaJugadores()){
-            jugadores.modificarPuntaje(j.getPuntaje());
-        }
         historial_de_competencias.add(competencia);
     }
 
@@ -153,12 +150,5 @@ public class Sistema
         for(Jugador j : jugadores){
             System.out.println("Nombre" + j.getNombre() + "DNI: " + j.getDni() + "Puntaje: " + j.getPuntaje() + "Partidas: " + j.getCant_partidas());
         }
-    }
-    private ArrayList<Jugador> copiaJugadores(){
-        ArrayList<Jugador> copia_de_jugadores = new ArrayList<>();
-        for(Jugador j : jugadores){
-            copia_de_jugadores.add(j);
-        }
-        return copia_de_jugadores;
     }
 }
