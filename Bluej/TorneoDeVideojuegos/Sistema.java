@@ -57,7 +57,6 @@ public class Sistema
         do{
         System.out.println("Ingrese el dni del jugador");
         dni = terminal.nextInt();
-        comprobarRepetidos(dni);
         }while(comprobarRepetidos(dni));
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
@@ -66,9 +65,15 @@ public class Sistema
         for(Jugador j : jugadores){
             if(j.getDni() == dni){
                 return true;
-            }else{
-                return false;
             }
+        }
+        return false;
+    }
+    void listarJugadores(){
+        System.out.println("La lista de jugadores inscriptos es: ");
+        
+        for(Jugador j : jugadores){
+            System.out.println(j);
         }
     }
     
