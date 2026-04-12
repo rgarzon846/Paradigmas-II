@@ -59,8 +59,8 @@ public class Sistema
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
     }
-    ArrayList<Jugador> comprobarRepetidos(){
-        
+    void comprobarRepetidos(){
+        int ;
     }
     
 }
