@@ -12,8 +12,7 @@ public class Sistema
     // instance variables - replace the example below with your own
     private 
     ArrayList<Jugador> jugadores;
-    HashMap<String, Jugador> competencias;
-    ArrayList<Competencia> historialDeCompetencias;
+    ArrayList<Competencia> historial_de_competencias;
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
@@ -24,7 +23,7 @@ public class Sistema
     {
         // initialise instance variables
         jugadores = new ArrayList<>();
-        competencias = new HashMap<>();
+        historial_de_competencias = new ArrayList<>();
         cant_jugadores = 0;
         cant_rondas = 0;
         terminal = new Scanner(System.in);
@@ -82,29 +81,25 @@ public class Sistema
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores);
-        
-        cargarGanador(nombre_juego, competencia.getGanadorCompetencia());
-    }
-    void cargarGanador(String nombre_juego, Jugador ganador){
-        competencias.put(nombre_juego, ganador);
+        historial_de_competencias.add(competencia);
     }
     void imprimirGanadoresDeCadaJuego(){
         int i = 1;
         System.out.println("Los juegos que se han jugado son: ");
-        for(String juego : competencias.keySet()){
-            i++;
+        for(Competencia c : historial_de_competencias){
             System.out.println(i + ") " + juego);
+            i++;
         }
         System.out.println("Los ganadores de cada juego son: ");
         i = 1;
-        for(Jugador ganador: competencias.values()){
-            i++;
+        for(Jugador ganador : historial_de_competencias.getGanadorCompetencia()){
             System.out.println(i + ") " + ganador.getNombre());
+            i++;
         }
     }
     void mostrarHistorialDePartidas(){
         System.out.println("El historial de competencias es: ");
-        for(HashMap<Integer, Jugador> historial : ){
+        for(HashMap<Integer, Jugador> historial : historial_de_competencias){
             
         }
     }

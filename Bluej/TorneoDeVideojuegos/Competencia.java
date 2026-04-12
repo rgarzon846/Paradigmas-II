@@ -110,4 +110,7 @@ public class Competencia {
     public HashMap<Integer, Jugador> getPartidas() {
         return partidas;
     }
+    public String getNombre_juego(){
+        return nombre_juego;
+    }
 }
