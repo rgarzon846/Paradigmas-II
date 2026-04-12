@@ -87,20 +87,21 @@ public class Sistema
         int i = 1;
         System.out.println("Los juegos que se han jugado son: ");
         for(Competencia c : historial_de_competencias){
-            System.out.println(i + ") " + juego);
+            System.out.println(i + ") " + c.getNombre_juego());
             i++;
         }
         System.out.println("Los ganadores de cada juego son: ");
         i = 1;
-        for(Jugador ganador : historial_de_competencias.getGanadorCompetencia()){
-            System.out.println(i + ") " + ganador.getNombre());
+        for(Competencia c : historial_de_competencias){
+            System.out.println(i + ") " + c.getGanadorCompetencia().getNombre());
             i++;
         }
     }
     void mostrarHistorialDePartidas(){
-        System.out.println("El historial de competencias es: ");
-        for(HashMap<Integer, Jugador> historial : historial_de_competencias){
-            
+        System.out.println("El historial de partidas es: ");
+        for(Competencia c : historial_de_competencias){
+            System.out.println("Nro de partida: " + c.getPartidas().keySet());
+            System.out.println("Ganador de la partida: " + c.getPartidas().values());
         }
     }
 }
