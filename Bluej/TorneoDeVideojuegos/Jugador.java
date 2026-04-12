@@ -45,13 +45,7 @@ public class Jugador
      * @return     the sum of x and y 
      */
     public 
-    void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    void setDni(int dni){
-        this.dni = dni;
-    }
-    void set
+    
     String getNombre(){
         return nombre;
     }

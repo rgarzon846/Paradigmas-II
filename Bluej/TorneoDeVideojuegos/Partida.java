@@ -41,9 +41,15 @@ public class Partida
     }
     void asignarPuntajes(){
         Random num = new Random();
-        int jugador = num.nextInt(1);
+        int jugador = num.nextInt(3);
         if(jugador == 1){
-            ganador;
+            ganador = jugador1;
+            jugador1.modificarPuntaje(1);
+        }else if(jugador == 2){
+            ganador = jugador2;
+            jugador2.modificarPuntaje(1);
+        }else{
+            
         }
     }
     
