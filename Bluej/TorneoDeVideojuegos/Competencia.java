@@ -11,16 +11,18 @@ public class Competencia {
     private ArrayList<Jugador> jugadores;
     private ArrayList<Partida> partidas;
     private String nombre_juego;
+    int rondas;
 
     /**
      * Constructor del objeto Competencia.
      * @param nombre_juego Nombre del juego o torneo.
      * @param jugadores Lista inicial de participantes.
      */
-    public Competencia(String nombre_juego, ArrayList<Jugador> jugadores) {
+    public Competencia(String nombre_juego, ArrayList<Jugador> jugadores, int rondas) {
         this.jugadores = jugadores;
         this.partidas = new ArrayList<>();
         this.nombre_juego = nombre_juego;
+        this.rondas = rondas;
     }
 
     /**
@@ -28,13 +30,10 @@ public class Competencia {
      */
   public void realizarPartidas(){
         Random random = new Random();
-        Sistema sistema = new Sistema();
         Partida p;
         int indice1;
         int indice2;
         boolean fin = false;
-
-        int rondas = sistema.getRondas();
         int cantJugadores = jugadores.size();
 
         do{ 
@@ -58,7 +57,8 @@ public class Competencia {
         rondas = rondas/2;
         reiniciarEmparejamiento();
         }while(!fin);
-
+        
+        
         System.out.println("Competencia terminada, ganador: " + getGanadorCompetencia().getNombre());
     }
 

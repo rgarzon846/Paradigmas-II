@@ -95,7 +95,7 @@ public class Sistema
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         terminal.nextLine();
         nombre_juego = terminal.nextLine();
-        Competencia competencia = new Competencia(nombre_juego, jugadores);
+        Competencia competencia = new Competencia(nombre_juego, jugadores, cant_rondas);
         competencia.realizarPartidas();
         historial_de_competencias.add(competencia);
     }
