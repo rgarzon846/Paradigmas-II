@@ -52,12 +52,13 @@ public class Sistema
         
         
     }
-    Jugador cargarJugador(){
+    private Jugador cargarJugador(){
         String nombre = "";
         int dni = 0;
         System.out.println("Ingrese el nombre del jugador: ");
+        terminal.nextLine();
         nombre = terminal.nextLine();
-        nombre = nombre.toLower().trim();
+        nombre.toLowerCase().trim();
         do{
         System.out.println("Ingrese el dni del jugador");
         dni = terminal.nextInt();
@@ -65,7 +66,7 @@ public class Sistema
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
     }
-    boolean comprobarRepetidos(int dni){
+    private boolean comprobarRepetidos(int dni){
         for(Jugador j : jugadores){
             if(j.getDni() == dni){
                 return true;
@@ -112,7 +113,7 @@ public class Sistema
     public void buscarJugador(){
         Jugador jugador_encontrado = null;
         System.out.println("Nombre del jugador que desea buscar: ");
-        String buscar = teclado.nextLine();
+        String buscar = terminal.nextLine();
         buscar = buscar.toLowerCase().trim();
         for(Jugador j : jugadores){
             if(j.getNombre().equals(buscar)){
@@ -120,7 +121,7 @@ public class Sistema
             }
         }
         if(jugador_encontrado == null) System.out.println("No se encontro el jugador");
-        else System.out.println(jugador_encontrado.getNombre() + "DNI: " + jugador_encontrado.getDni() + "Puntaje: " + jugador_encontrado.getPuntaje() + "Partidas: " + jugador_encontrado.getPartidas());
+        else System.out.println(jugador_encontrado.getNombre() + "DNI: " + jugador_encontrado.getDni() + "Puntaje: " + jugador_encontrado.getPuntaje() + "Partidas: " + jugador_encontrado.getCant_partidas());
     }
     public void mostrarRanking(){
     for (int i = 0; i < cant_jugadores - 1; i++) {
@@ -133,7 +134,7 @@ public class Sistema
             }
         }
         for(Jugador j : jugadores){
-          System.out.println("Nombre" + j.getNombre() + "DNI: " + j.getDni() + "Puntaje: " + j.getPuntaje() + "Partidas: " + j.getPartidas());
+          System.out.println("Nombre" + j.getNombre() + "DNI: " + j.getDni() + "Puntaje: " + j.getPuntaje() + "Partidas: " + j.getCant_partidas());
         }
     }
 }
