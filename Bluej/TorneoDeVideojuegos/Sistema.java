@@ -58,7 +58,7 @@ public class Sistema
         System.out.println("Ingrese el nombre del jugador" + i + ": ");
         terminal.nextLine();
         nombre = terminal.nextLine();
-        nombre.toLowerCase().trim();
+        nombre = nombre.toLowerCase().trim();
         do{
         System.out.println("Ingrese el dni del jugador" + i + ": ");
         dni = terminal.nextInt();
@@ -89,6 +89,7 @@ public class Sistema
         terminal.nextLine();
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores);
+        competencia.realizarPartidas();
         historial_de_competencias.add(competencia);
     }
     void imprimirGanadoresDeCadaJuego(){

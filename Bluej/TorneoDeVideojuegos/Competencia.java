@@ -57,7 +57,6 @@ public class Competencia {
                     p.asignarPuntajes();
                     partidas.put(contPartidas, p.getGanador());
                 } else {
-                    // Si los índices elegidos no están disponibles, reintentamos el ciclo
                     i--; 
                 }
             }
