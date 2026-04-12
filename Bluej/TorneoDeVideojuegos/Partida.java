@@ -45,20 +45,24 @@ public class Partida
         }else if(jugador == 2){
             ganador = jugador2;
             jugador2.modificarPuntaje(1);
-            
+            jugador1.setEliminado(true);
         }else{
             casoEmpate();
         }
         jugador1.modificarCant_partidas(1);
         jugador2.modificarCant_partidas(1);
     }
-    void casoEmpate(){
+    private void casoEmpate(){
         Random num = new Random();
         int jugador = num.nextInt(2);
         if(jugador == 1){
             ganador = jugador1;
+            jugador1.modificarPuntaje(1);
+            jugador2.setEliminado(true);
         }else{
             ganador = jugador2;
+            jugador2.modificarPuntaje(1);
+            jugador1.setEliminado(true);
         }
     }
     
