@@ -2,7 +2,7 @@
 /**
  * Representa un jugador dentro del torneo.
  * Permite almacenar su nombre, puntaje y partidas jugadas.
- * @author Rocio 
+ * @author Farid 
  * @version 1.0
  */
 public class Jugador
@@ -27,7 +27,11 @@ public class Jugador
         emparejado = false;
         eliminado = false;
     }
-    
+    /**
+     * Constructor para el objeto de la clase Jugador
+     * @param nombre nickname del jugador
+     * @param dni del jugador
+     */
     Jugador(String nombre, int dni)
     {
         this.nombre = nombre;
@@ -38,23 +42,31 @@ public class Jugador
         eliminado = false;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
     public 
-    
+    /**
+     * Retorna el nombre del jugador
+     * @return nombre
+    */
     String getNombre(){
         return nombre;
     }
+    /**
+     * Retorna el DNI del jugador
+     * @return dni
+     */
     int getDni(){
         return dni;
     }
+    /**
+     * Retorna el puntaje del jugador
+     * @return puntaje
+     */
     int getPuntaje(){
         return puntaje;
     }
+    /**
+     * 
+     */
     int getCant_partidas(){
         return cant_partidas;
     }

@@ -36,7 +36,7 @@ public class Sistema
         return cant_rondas;
     }
     /**
-     * Permite ingresar una lista de jugadores
+     * Permite ingresar una lista de jugadores, determina el cupo de inscripciones
      */
     void ingresarJugadores()
     {
@@ -53,7 +53,8 @@ public class Sistema
     }
     /**
      * Añade el jugador con sus atributos a la lista.
-     * @param 
+     * @param i indice de jugador en la lista
+     * @return jugador objeto de tipo Jugador con sus atributos cargados
      */
     private Jugador cargarJugador(int i){
         String nombre = "";
@@ -69,7 +70,12 @@ public class Sistema
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
     }
-    
+    /**
+     * Verifica que no se este ingresando un jugador repetido
+     * @param dni atributo del jugador irrepetible
+     * @return {code: true} si el dni ya fue ingresado antes
+     * @return {code: false} si el dni no fue ingresado antes
+     */
     private boolean comprobarRepetidos(int dni){
         for(Jugador j : jugadores){
             if(j.getDni() == dni){
@@ -79,7 +85,9 @@ public class Sistema
         }
         return false;
     }
-
+    /**
+     * Imprime los jugadores inscriptos en formato lista
+     */
     void listarJugadores(){
         System.out.println("La lista de jugadores inscriptos es: ");
         for(Jugador j : jugadores){
@@ -89,7 +97,9 @@ public class Sistema
                 j.getCant_partidas());        
             }
     }
-
+    /**
+     * Permite crear la competencia del juego que se desee
+     */
     void iniciarCompetencia(){
         String nombre_juego = " ";
         System.out.println("Ingrese el nombre del juego a jugarse: ");
@@ -98,13 +108,17 @@ public class Sistema
         competencia.realizarPartidas();
         historial_de_competencias.add(competencia);
     }
-
+    /**
+     * Imprime el ganador de cada competencia en formato lista
+     */
     void imprimirGanadoresDeCadaJuego(){
         for(Competencia c : historial_de_competencias){
             System.out.println("Juego jugado: " + c.getNombre_juego() + "ganador: " + c.getGanadorCompetencia().getNombre() + " dni: " + c.getGanadorCompetencia().getDni());
         }
     }
-
+    /**
+     * Imprime cada partida de la competencia y su ganador en formato lista
+     */
     void mostrarHistorialDePartidas(){
         int i = 1;
         for(Competencia c : historial_de_competencias){
@@ -116,7 +130,10 @@ public class Sistema
         i = 1;
     }
     }
-
+    /**
+     * Permite buscar un jugador por su nombre
+     * Imprime el jugador encontrado
+     */
     public void buscarJugador(){
         Jugador jugador_encontrado = null;
         System.out.println("Nombre del jugador que desea buscar: ");
@@ -134,7 +151,9 @@ public class Sistema
                 jugador_encontrado.getPuntaje() + "     Partidas: " + 
                 jugador_encontrado.getCant_partidas());
     }
-
+    /**
+     * Imprime la lista de jugadores segun sus puntos, de mayor a menor, en formato lista
+     */
     public void mostrarRanking(){
         for (int i = 0; i < jugadores.size() - 1; i++) {
             for (int j = 0; j < jugadores.size() - i - 1; j++){
