@@ -32,6 +32,7 @@ public class Competencia {
      */
   public void realizarPartidas(){
         reiniciarEliminado();
+        int copia_rondas = rondas;
         Random random = new Random();
         Partida p;
         int indice1;
@@ -40,7 +41,7 @@ public class Competencia {
         int cantJugadores = jugadores.size();
 
         do{ 
-        for(int i = 0; i < rondas; i++){
+        for(int i = 0; i < copia_rondas; i++){
             indice1 = random.nextInt(cantJugadores);
             indice2 = random.nextInt(cantJugadores);
             while(indice1 == indice2) indice2 =random.nextInt(cantJugadores);
@@ -56,12 +57,12 @@ public class Competencia {
             }
             else i--;
         }
-        if(rondas == 1) fin = true;
-        rondas = rondas/2;
+        if(copia_rondas == 1) fin = true;
+        copia_rondas = copia_rondas/2;
         reiniciarEmparejamiento();
         }while(!fin);
         
-        
+        setGanadorCompetencia();
         System.out.println("Competencia terminada, ganador: " + getGanadorCompetencia().getNombre());
     }
 

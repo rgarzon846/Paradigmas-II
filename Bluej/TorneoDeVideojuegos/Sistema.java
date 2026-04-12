@@ -91,9 +91,9 @@ public class Sistema
     }
 
     void iniciarCompetencia(){
+        terminal.nextLine();
         String nombre_juego = " ";
         System.out.println("Ingrese el nombre del juego a jugarse: ");
-        terminal.nextLine();
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores, cant_rondas);
         competencia.realizarPartidas();
