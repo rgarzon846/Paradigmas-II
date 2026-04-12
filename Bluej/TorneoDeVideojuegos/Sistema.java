@@ -113,7 +113,7 @@ public class Sistema
      */
     void imprimirGanadoresDeCadaJuego(){
         for(Competencia c : historial_de_competencias){
-            System.out.println("Juego jugado: " + c.getNombre_juego() + "ganador: " + c.getGanadorCompetencia().getNombre() + " dni: " + c.getGanadorCompetencia().getDni());
+            System.out.println("Juego jugado: " + c.getNombre_juego() + "       ganador: " + c.getGanadorCompetencia().getNombre() + " dni: " + c.getGanadorCompetencia().getDni());
         }
     }
     /**
