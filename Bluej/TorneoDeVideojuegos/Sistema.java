@@ -46,7 +46,7 @@ public class Sistema
         for(int i = 0; i < cant_jugadores - 1; i++){
             jugadores.add(cargarJugador());
         }
-        comprobarRepetidos();
+        
         
     }
     Jugador cargarJugador(){
@@ -54,16 +54,27 @@ public class Sistema
         int dni = 0;
         System.out.println("Ingrese el nombre del jugador: ");
         nombre = terminal.nextLine();
+        do{
         System.out.println("Ingrese el dni del jugador");
         dni = terminal.nextInt();
+        comprobarRepetidos(dni);
+        }while(comprobarRepetidos(dni));
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
     }
-    void comprobarRepetidos(){
-        HashSet<Jugador> sin_repetidos = new HashSet<>(jugadores);
-        jugadores = new ArrayList<>();
-        for(Jugador j : sin_repetidos){
-            jugadores.add(j);
+    boolean comprobarRepetidos(int dni){
+        int[] dnis = new int[cant_jugadores];
+        for(){
+            
+        }
+        for(int i = 0; i < cant_jugadores - 1; i++){
+            for(int j = 1; j < cant_jugadores; j++){
+                if(dnis[i] == dnis[j]){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
         }
     }
     
