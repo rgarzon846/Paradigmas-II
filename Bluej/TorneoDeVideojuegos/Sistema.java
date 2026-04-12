@@ -13,6 +13,9 @@ public class Sistema
     private 
     ArrayList<Jugador> jugadores;
     HashMap<Competencia, Jugador> competencias;
+    int cant_jugadores;
+    int cant_rondas;
+    Scanner terminal;
 
     /**
      * Constructor for objects of class Sistema
@@ -22,6 +25,9 @@ public class Sistema
         // initialise instance variables
         jugadores = new ArrayList<>();
         competencias = new HashMap<>();
+        cant_jugadores = 0;
+        cant_rondas = 0;
+        terminal = new Scanner(System.in);
     }
 
     /**
@@ -31,9 +37,16 @@ public class Sistema
      * @return     the sum of x and y 
      */
     public 
-    void listarJugadores()
+    void ingresarJugadores()
     {
-        // put your code here
-        return x + y;
+        System.out.println("Ingrese la cantidad de rondas que tendra cada competencia por favor: ");
+        cant_rondas = terminal.nextInt();
+        cant_jugadores = (int) Math.pow(2, cant_rondas);
+        
+        for(int i = 0; i < cant_jugadores - 1; i++){
+            
+            Jugador jugador = new Jugador();
+        }
+        
     }
 }
