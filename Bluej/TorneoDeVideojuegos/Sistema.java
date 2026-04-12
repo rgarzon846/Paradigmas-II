@@ -83,8 +83,11 @@ public class Sistema
         System.out.println("La lista de jugadores inscriptos es: ");
         System.out.println("Nombre      DNI     Puntaje     Partidas");
         for(Jugador j : jugadores){
-            System.out.println();
-        }
+            System.out.println(j.getNombre() + "DNI: " + 
+                j.getDni() + "Puntaje: " + 
+                j.getPuntaje() + "Partidas: " + 
+                j.getCant_partidas());        
+            }
     }
 
     void iniciarCompetencia(){
