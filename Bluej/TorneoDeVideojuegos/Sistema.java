@@ -87,8 +87,18 @@ public class Sistema
         competencias.put(nombre_juego, ganador);
     }
     void imprimirGanadoresDeCadaJuego(){
-        for(){
-            
+        int i = 0;
+        for(String juego : competencias.keySet()){
+            i++;
+            System.out.println(i + ") " + juego);
         }
+        i = 0;
+        for(Jugador ganador: competencias.values()){
+            i++;
+            System.out.println(i + ") " + ganador.getNombre());
+        }
+    }
+    void mostrarHistorialDePartidas(){
+        
     }
 }
