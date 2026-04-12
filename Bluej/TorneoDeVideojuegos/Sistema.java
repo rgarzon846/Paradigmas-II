@@ -36,6 +36,10 @@ public class Sistema
      * @return     the sum of x and y 
      */
     public 
+    int getRondas(){
+        return cant_rondas;
+    }
+    
     void ingresarJugadores()
     {
         System.out.println("Ingrese la cantidad de rondas que tendra cada competencia por favor: ");
@@ -53,6 +57,7 @@ public class Sistema
         int dni = 0;
         System.out.println("Ingrese el nombre del jugador: ");
         nombre = terminal.nextLine();
+        
         do{
         System.out.println("Ingrese el dni del jugador");
         dni = terminal.nextInt();
@@ -104,4 +109,16 @@ public class Sistema
             System.out.println("Ganador de la partida: " + c.getPartidas().values());
         }
     }
+    public void buscarJugador(){
+        Jugador jugador_encontrado = null;
+        System.out.println("Nombre del jugador que desea buscar: ");
+        String buscar = teclado.nextLine();
+        buscar = buscar.toLowerCase().trim();
+        for(Jugador j : jugadores){
+            if(j.getNombre().equals(buscar)){
+                jugador_encontrado = j;
+            }
+        }
+        if(jugador_encontrado == null) System.out.println("No se encontro el jugador");
+        else System.out.println(jugador_encontrado.getNombre() + jugador_encontrado.getDni() + "puntaje: " + jugador_encontrado.getPuntaje());
 }
