@@ -105,4 +105,8 @@ public class Competencia {
     public String getNombre_juego(){
         return nombre_juego;
     }
+    
+    public ArrayList<Jugador> getListaJugadores(){
+        return jugadores;
+    }
 }

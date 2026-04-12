@@ -97,6 +97,9 @@ public class Sistema
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, copiaJugadores(), cant_rondas);
         competencia.realizarPartidas();
+        for(Jugador j : competencia.getListaJugadores()){
+            jugadores.modificarPuntaje(j.getPuntaje());
+        }
         historial_de_competencias.add(competencia);
     }
 
