@@ -81,17 +81,15 @@ public class Sistema
 
     void listarJugadores(){
         System.out.println("La lista de jugadores inscriptos es: ");
-        System.out.println("Nombre      DNI     Puntaje     Partidas");
         for(Jugador j : jugadores){
-            System.out.println(j.getNombre() + "DNI: " + 
-                j.getDni() + "Puntaje: " + 
-                j.getPuntaje() + "Partidas: " + 
+            System.out.println(j.getNombre() + "        DNI: " + 
+                j.getDni() + "      Puntaje: " + 
+                j.getPuntaje() + "      Partidas: " + 
                 j.getCant_partidas());        
             }
     }
 
     void iniciarCompetencia(){
-        terminal.nextLine();
         String nombre_juego = " ";
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         nombre_juego = terminal.nextLine();
@@ -111,7 +109,7 @@ public class Sistema
         for(Competencia c : historial_de_competencias){
             System.out.println("Partidas de la competencia: " + c.getNombre_juego());
             for(Partida p : c.getPartidas()){
-            System.out.println("Nro de partida: " + i + ", ganador de la partida: " + p.getGanador().getNombre() + " DNI: " + p.getGanador().getNombre());
+            System.out.println("Nro de partida: " + i + ", ganador de la partida: " + p.getGanador().getNombre() + " DNI: " + p.getGanador().getDni());
             i++;
         }
         i = 1;
@@ -121,7 +119,6 @@ public class Sistema
     public void buscarJugador(){
         Jugador jugador_encontrado = null;
         System.out.println("Nombre del jugador que desea buscar: ");
-        terminal.nextLine();
         String buscar = terminal.nextLine();
         buscar = buscar.toLowerCase().trim();
         for(Jugador j : jugadores){
@@ -131,9 +128,9 @@ public class Sistema
             }
         }
         if(jugador_encontrado == null) System.out.println("No se encontro el jugador");
-        else System.out.println(jugador_encontrado.getNombre() + "DNI: " + 
-                jugador_encontrado.getDni() + "Puntaje: " + 
-                jugador_encontrado.getPuntaje() + "Partidas: " + 
+        else System.out.println(jugador_encontrado.getNombre() + "      DNI: " + 
+                jugador_encontrado.getDni() + "     Puntaje: " + 
+                jugador_encontrado.getPuntaje() + "     Partidas: " + 
                 jugador_encontrado.getCant_partidas());
     }
 
@@ -148,7 +145,7 @@ public class Sistema
             }
         }
         for(Jugador j : jugadores){
-            System.out.println("Nombre" + j.getNombre() + "DNI: " + j.getDni() + "Puntaje: " + j.getPuntaje() + "Partidas: " + j.getCant_partidas());
+            System.out.println("Nombre:     " + j.getNombre() + "     DNI: " + j.getDni() + "     Puntaje: " + j.getPuntaje() + "     Partidas: " + j.getCant_partidas());
         }
     }
 }
