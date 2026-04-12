@@ -13,7 +13,8 @@ public class Jugador
     int dni;
     int puntaje;
     int cant_partidas;
-
+    boolean emparejado;
+    boolean eliminado;
     /**
      * Constructor para el objeto de la clase Jugador
      */
@@ -23,6 +24,8 @@ public class Jugador
         dni = 0;
         puntaje = 0;
         cant_partidas = 0;
+        emparejado = false;
+        eliminado = false;
     }
     
     Jugador(String nombre, int dni)
@@ -31,6 +34,8 @@ public class Jugador
         this.dni = dni;
         puntaje = 0;
         cant_partidas = 0;
+        emparejado = false;
+        eliminado = false;
     }
 
     /**
@@ -40,6 +45,13 @@ public class Jugador
      * @return     the sum of x and y 
      */
     public 
+    void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    void setDni(int dni){
+        this.dni = dni;
+    }
+    void set
     String getNombre(){
         return nombre;
     }
@@ -57,5 +69,17 @@ public class Jugador
     }
     void modificarCant_partidas(int cant_partidas){
         this.cant_partidas += cant_partidas;
+    }
+    void setEmparejado(boolean emparejado){
+        this.emparejado = emparejado;
+    }
+    void setEliminado(boolean eliminado){
+        this.eliminado = eliminado;
+    }
+    boolean getEmparejado(){
+        return emparejado;
+    }
+    boolean getEliminado(){
+        return eliminado;
     }
 }

@@ -22,7 +22,7 @@ public class Partida
         // initialise instance variables
         
         ganador = new Jugador();
-        nombre_juego = " ";
+        nombre_juego = nombre_juego;
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
     }
@@ -40,8 +40,11 @@ public class Partida
         this.nombre_juego = nombre_juego;
     }
     void asignarPuntajes(){
-        Random jugador = new Random();
-        
+        Random num = new Random();
+        int jugador = num.nextInt(1);
+        if(jugador == 1){
+            ganador;
+        }
     }
     
 }
