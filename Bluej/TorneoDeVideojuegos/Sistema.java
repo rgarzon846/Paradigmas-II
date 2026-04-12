@@ -49,7 +49,7 @@ public class Sistema
         for(int i = 0; i < cant_jugadores; i++){
             jugadores.add(cargarJugador(i));
         }
-        
+        System.out.println("Se completo el cupo de inscripciones del torneo!");
         
     }
     private Jugador cargarJugador(int i){
@@ -69,7 +69,7 @@ public class Sistema
     private boolean comprobarRepetidos(int dni){
         for(Jugador j : jugadores){
             if(j.getDni() == dni){
-                
+                System.out.println("Se ingreso un DNI repetido, vuelva a ingresar");
                 return true;
             }
         }
@@ -86,6 +86,7 @@ public class Sistema
     void iniciarCompetencia(){
         String nombre_juego = " ";
         System.out.println("Ingrese el nombre del juego a jugarse: ");
+        terminal.nextLine();
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores);
         historial_de_competencias.add(competencia);
