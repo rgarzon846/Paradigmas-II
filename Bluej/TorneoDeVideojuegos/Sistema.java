@@ -101,17 +101,8 @@ public class Sistema
     }
 
     void imprimirGanadoresDeCadaJuego(){
-        int i = 1;
-        System.out.println("Los juegos que se han jugado son: ");
         for(Competencia c : historial_de_competencias){
-            System.out.println(i + ") " + c.getNombre_juego());
-            i++;
-        }
-        System.out.println("Los ganadores de cada juego son: ");
-        i = 1;
-        for(Competencia c : historial_de_competencias){
-            System.out.println(i + ") " + c.getGanadorCompetencia().getNombre());
-            i++;
+            System.out.println("Juego jugado: " + c.getNombre_juego + "ganador: " + c.getGanadorCompetencia().getNombre() + " dni: " + c.getGanadorCompetencia().getDni());
         }
     }
 
