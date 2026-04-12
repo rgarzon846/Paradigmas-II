@@ -83,7 +83,7 @@ public class Sistema
         System.out.println("La lista de jugadores inscriptos es: ");
         System.out.println("Nombre      DNI     Puntaje     Partidas");
         for(Jugador j : jugadores){
-            System.out.println(j);
+            System.out.println();
         }
     }
 
@@ -113,15 +113,10 @@ public class Sistema
     }
 
     void mostrarHistorialDePartidas(){
+        int i = 1;
         System.out.println("El historial de partidas es: ");
         for(Competencia c : historial_de_competencias){
-            System.out.println(i + ") " + c.getNombre_juego());
-            i++;
-        }
-        System.out.println("Los ganadores de cada juego son: ");
-        i = 1;
-        for(Competencia c : historial_de_competencias){
-            System.out.println(i + ") " + c.getGanadorCompetencia().getNombre());
+            System.out.println("Ganador Partida " + i + ": " + c.getPartidas().get(i));
             i++;
         }
     }
