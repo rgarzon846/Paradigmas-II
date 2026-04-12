@@ -10,7 +10,9 @@ import java.util.*;
 public class Sistema
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private 
+    ArrayList<Jugador> jugadores;
+    HashMap<Competencia, Jugador> competencias;
 
     /**
      * Constructor for objects of class Sistema
@@ -18,7 +20,8 @@ public class Sistema
     public Sistema()
     {
         // initialise instance variables
-        x = 0;
+        jugadores = new ArrayList<>();
+        competencias = new HashMap<>();
     }
 
     /**
@@ -27,7 +30,8 @@ public class Sistema
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public 
+    void listarJugadores()
     {
         // put your code here
         return x + y;
