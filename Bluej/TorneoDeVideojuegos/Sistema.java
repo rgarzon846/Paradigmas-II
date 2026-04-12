@@ -13,6 +13,7 @@ public class Sistema
     private 
     ArrayList<Jugador> jugadores;
     HashMap<String, Jugador> competencias;
+    ArrayList<Competencia> historialDeCompetencias;
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
@@ -81,24 +82,30 @@ public class Sistema
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores);
+        
         cargarGanador(nombre_juego, competencia.getGanadorCompetencia());
     }
     void cargarGanador(String nombre_juego, Jugador ganador){
         competencias.put(nombre_juego, ganador);
     }
     void imprimirGanadoresDeCadaJuego(){
-        int i = 0;
+        int i = 1;
+        System.out.println("Los juegos que se han jugado son: ");
         for(String juego : competencias.keySet()){
             i++;
             System.out.println(i + ") " + juego);
         }
-        i = 0;
+        System.out.println("Los ganadores de cada juego son: ");
+        i = 1;
         for(Jugador ganador: competencias.values()){
             i++;
             System.out.println(i + ") " + ganador.getNombre());
         }
     }
     void mostrarHistorialDePartidas(){
-        
+        System.out.println("El historial de competencias es: ");
+        for(HashMap<Integer, Jugador> historial : ){
+            
+        }
     }
 }
