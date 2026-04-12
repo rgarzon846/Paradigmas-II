@@ -2,12 +2,13 @@
 comment0.target=Partida
 comment1.params=jugador1\ jugador2\ nombre_juego
 comment1.target=Partida(Jugador,\ Jugador,\ java.lang.String)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Partida\n
+comment1.text=\n\ Constructor\ para\ objetos\ de\ la\ clase\ Partida\n\ @param\ jugador1\ almacena\ los\ datos\ de\ un\ competidor\n\ @param\ jugador2\ almacena\ los\ datos\ de\ otro\ competidor\n
 comment2.params=
 comment2.target=void\ asignarPuntajes()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
 comment3.params=
 comment3.target=void\ casoEmpate()
+comment3.text=\n\ Determina\ el\ ganador\ en\ caso\ de\ que\ haya\ habido\ un\ empate\n
 comment4.params=
 comment4.target=Jugador\ getGanador()
+comment4.text=\n\ Retorna\ el\ ganador\ de\ la\ partida\n\ @return\ ganador\n
 numComments=5

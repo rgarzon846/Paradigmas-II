@@ -65,7 +65,10 @@ public class Partida
             jugador1.setEliminado(true);
         }
     }
-    
+    /**
+     * Retorna el ganador de la partida
+     * @return ganador
+     */
     Jugador getGanador(){
         return ganador;
     }

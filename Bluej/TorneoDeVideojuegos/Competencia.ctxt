@@ -1,11 +1,9 @@
 #BlueJ class context
 comment0.target=Competencia
-comment0.text=\n\ Gestiona\ el\ desarrollo\ de\ la\ competencia,\ coordinando\ las\ rondas,\ \n\ los\ emparejamientos\ aleatorios\ y\ la\ determinaci\u00F3n\ del\ ganador\ final.\n\ *\ @author\ Sanchez\ Solano\ Juan\ Cruz\ \n\ @version\ 1.0\n
+comment0.text=\n\ Gestiona\ el\ desarrollo\ de\ la\ competencia,\ coordina\ las\ rondas,\ \n\ los\ emparejamientos\ aleatorios\ y\ la\ determinaci\u00F3n\ del\ ganador\ final.\n\ *\ @author\ Sanchez\ Solano\ Juan\ Cruz\ \n\ @version\ 1.0\n
 comment1.params=nombre_juego\ jugadores\ rondas
 comment1.target=Competencia(java.lang.String,\ java.util.ArrayList,\ int)
 comment1.text=\n\ Constructor\ del\ objeto\ Competencia.\n\ @param\ nombre_juego\ Nombre\ del\ juego\ o\ torneo.\n\ @param\ jugadores\ Lista\ inicial\ de\ participantes.\n
-comment10.params=
-comment10.target=java.util.ArrayList\ getListaJugadores()
 comment2.params=
 comment2.target=void\ realizarPartidas()
 comment2.text=\n\ Ejecuta\ la\ l\u00F3gica\ de\ las\ partidas\ por\ rondas\ hasta\ hallar\ un\ ganador.\n
@@ -27,4 +25,4 @@ comment8.target=java.util.ArrayList\ getPartidas()
 comment8.text=\n\ Retorna\ el\ historial\ de\ partidas\ disputadas.\n\ @return\ Un\ {@code\ HashMap}\ con\ el\ ID\ de\ partida\ y\ el\ ganador\ correspondiente.\n
 comment9.params=
 comment9.target=java.lang.String\ getNombre_juego()
-numComments=11
+numComments=10
