@@ -1,15 +1,14 @@
 
 /**
- * Write a description of class Sistema here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Sistema de administracion de torneo de videojuegos.
+ * Permite ingresar jugadores, buscar jugadores, ver estadisticas de jugadores y listar jugadores.
+ * @author Juan, Rocio 
+ * @version 1.0
  */
 import java.util.*;
 
 public class Sistema
 {
-    // instance variables - replace the example below with your own
     private 
     ArrayList<Jugador> jugadores;
     ArrayList<Competencia> historial_de_competencias;
@@ -17,11 +16,11 @@ public class Sistema
     int cant_rondas;
     Scanner terminal;
     /**
-     * Constructor for objects of class Sistema
-     */
+     * Constructor clase Sistema
+    */
     public Sistema()
     {
-        // initialise instance variables
+        
         jugadores = new ArrayList<>();
         historial_de_competencias = new ArrayList<>();
         cant_jugadores = 0;
@@ -30,16 +29,15 @@ public class Sistema
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Muestra la cantidad de rondas elegidas para la competencia
      */
     public 
     int getRondas(){
         return cant_rondas;
     }
-
+    /**
+     * Permite ingresar una lista de jugadores
+     */
     void ingresarJugadores()
     {
         System.out.println("Ingrese la cantidad de rondas que tendra cada competencia por favor: ");
@@ -53,7 +51,10 @@ public class Sistema
         System.out.println("Se completo el cupo de inscripciones del torneo!");
 
     }
-
+    /**
+     * Añade el jugador con sus atributos a la lista.
+     * @param 
+     */
     private Jugador cargarJugador(int i){
         String nombre = "";
         int dni = 0;
@@ -68,7 +69,7 @@ public class Sistema
         Jugador jugador = new Jugador(nombre, dni);
         return jugador;
     }
-
+    
     private boolean comprobarRepetidos(int dni){
         for(Jugador j : jugadores){
             if(j.getDni() == dni){

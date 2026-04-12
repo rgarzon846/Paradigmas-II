@@ -2,7 +2,7 @@
 import java.util.*;
 
 /**
- * Gestiona el desarrollo de la competencia, coordinando las rondas, 
+ * Gestiona el desarrollo de la competencia, coordina las rondas, 
  * los emparejamientos aleatorios y la determinación del ganador final.
  * * @author Sanchez Solano Juan Cruz 
  * @version 1.0
@@ -95,7 +95,7 @@ public class Competencia {
      * Busca en la lista al único jugador que no ha sido eliminado.
      * @return El objeto {@link Jugador} ganador.
      */
-    public void setGanadorCompetencia() {
+    private void setGanadorCompetencia() {
         for (Jugador p : jugadores) {
             if (!p.getEliminado()) {
                 this.ganador_de_competencia = p; // Retornamos apenas lo encontramos
@@ -115,9 +115,5 @@ public class Competencia {
     }
     public String getNombre_juego(){
         return nombre_juego;
-    }
-    
-    public ArrayList<Jugador> getListaJugadores(){
-        return jugadores;
     }
 }
