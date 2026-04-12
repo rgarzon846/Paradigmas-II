@@ -16,7 +16,6 @@ public class Sistema
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
-    
     /**
      * Constructor for objects of class Sistema
      */
@@ -71,10 +70,15 @@ public class Sistema
     }
     void listarJugadores(){
         System.out.println("La lista de jugadores inscriptos es: ");
-        
+        System.out.println("Nombre      DNI     Puntaje     Partidas");
         for(Jugador j : jugadores){
             System.out.println(j);
         }
     }
     
+    void iniciarCompetencia(){
+        String nombre_juego = " ";
+        
+        Competencia competencia = new Competencia(nombre_juego, jugadores);
+    }
 }
