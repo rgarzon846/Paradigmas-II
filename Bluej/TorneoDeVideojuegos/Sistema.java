@@ -60,7 +60,11 @@ public class Sistema
         return jugador;
     }
     void comprobarRepetidos(){
-        int ;
+        HashSet<Jugador> sin_repetidos = new HashSet<>(jugadores);
+        jugadores = new ArrayList<>();
+        for(Jugador j : sin_repetidos){
+            jugadores.add(j);
+        }
     }
     
 }
