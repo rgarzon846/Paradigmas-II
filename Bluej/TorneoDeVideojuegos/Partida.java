@@ -49,8 +49,23 @@ public class Partida
             ganador = jugador2;
             jugador2.modificarPuntaje(1);
         }else{
-            
+            casoEmpate();
         }
+        jugador1.modificarCant_partidas(1);
+        jugador2.modificarCant_partidas(1);
+    }
+    void casoEmpate(){
+        Random num = new Random();
+        int jugador = num.nextInt(2);
+        if(jugador == 1){
+            ganador = jugador1;
+        }else{
+            ganador = jugador2;
+        }
+    }
+    
+    Jugador getGanador(){
+        return ganador;
     }
     
 }
