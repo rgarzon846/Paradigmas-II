@@ -1,40 +1,36 @@
 
 /**
- * Write a description of class Partida here.
+ * Almacena los datos de la partida jugada.
+ * Asigna puntaje y numero de partidas jugadas a los jugadores
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rocio 
+ * @version 1.0
  */
 import java.util.Random;
 public class Partida
 {
-    // instance variables - replace the example below with your own
     private 
     Jugador ganador;
     String nombre_juego;
     Jugador jugador1;
     Jugador jugador2;
     /**
-     * Constructor for objects of class Partida
+     * Constructor para objetos de la clase Partida
+     * @param jugador1 almacena los datos de un competidor
+     * @param jugador2 almacena los datos de otro competidor
      */
     public Partida(Jugador jugador1, Jugador jugador2, String nombre_juego)
     {
-        // initialise instance variables
-        
         ganador = new Jugador();
         nombre_juego = nombre_juego;
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
+    
     public 
-   
+    /**
+     * Determina el puntaje de cada ganador
+     */
     void asignarPuntajes(){
         Random num = new Random();
         int jugador = num.nextInt(3);
@@ -47,11 +43,15 @@ public class Partida
             jugador2.modificarPuntaje(1);
             jugador1.setEliminado(true);
         }else{
+            System.out.println("Ha resultado en empate! Vuelvan a enfrentarse...");
             casoEmpate();
         }
         jugador1.modificarCant_partidas(1);
         jugador2.modificarCant_partidas(1);
     }
+    /**
+     * Determina el ganador en caso de que haya habido un empate
+     */
     private void casoEmpate(){
         Random num = new Random();
         int jugador = num.nextInt(2);
