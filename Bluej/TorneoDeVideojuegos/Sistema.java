@@ -57,7 +57,7 @@ public class Sistema
         int dni = 0;
         System.out.println("Ingrese el nombre del jugador: ");
         nombre = terminal.nextLine();
-        
+        nombre = nombre.toLower().trim();
         do{
         System.out.println("Ingrese el dni del jugador");
         dni = terminal.nextInt();
@@ -120,5 +120,20 @@ public class Sistema
             }
         }
         if(jugador_encontrado == null) System.out.println("No se encontro el jugador");
-        else System.out.println(jugador_encontrado.getNombre() + jugador_encontrado.getDni() + "puntaje: " + jugador_encontrado.getPuntaje());
+        else System.out.println(jugador_encontrado.getNombre() + "DNI: " + jugador_encontrado.getDni() + "Puntaje: " + jugador_encontrado.getPuntaje() + "Partidas: " + jugador_encontrado.getPartidas());
+    }
+    public void mostrarRanking(){
+    for (int i = 0; i < cant_jugadores - 1; i++) {
+        for (int j = 0; j < cant_jugadores - i - 1; j++){
+            if (jugadores.get(j).getPuntaje() < jugadores.get(j + 1).getPuntaje()) {
+                    Jugador temp = jugadores.get(j);
+                    jugadores.set(j, jugadores.get(j + 1));
+                    jugadores.set(j + 1, temp);
+                }
+            }
+        }
+        for(Jugador j : jugadores){
+          System.out.println("Nombre" + j.getNombre() + "DNI: " + j.getDni() + "Puntaje: " + j.getPuntaje() + "Partidas: " + j.getPartidas());
+        }
+    }
 }
