@@ -16,7 +16,7 @@ public class Sistema
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
-
+    
     /**
      * Constructor for objects of class Sistema
      */
@@ -63,17 +63,11 @@ public class Sistema
         return jugador;
     }
     boolean comprobarRepetidos(int dni){
-        int[] dnis = new int[cant_jugadores];
-        for(){
-            
-        }
-        for(int i = 0; i < cant_jugadores - 1; i++){
-            for(int j = 1; j < cant_jugadores; j++){
-                if(dnis[i] == dnis[j]){
-                    return true;
-                }else{
-                    return false;
-                }
+        for(Jugador j : jugadores){
+            if(j.getDni() == dni){
+                return true;
+            }else{
+                return false;
             }
         }
     }
