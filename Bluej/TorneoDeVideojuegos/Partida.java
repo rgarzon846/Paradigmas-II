@@ -34,11 +34,7 @@ public class Partida
      * @return     the sum of x and y 
      */
     public 
-    void setNombre_juego(String nombre_juego)
-    {
-        // put your code here
-        this.nombre_juego = nombre_juego;
-    }
+   
     void asignarPuntajes(){
         Random num = new Random();
         int jugador = num.nextInt(3);
