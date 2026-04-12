@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class Competencia {
     private ArrayList<Jugador> jugadores;
-    private HashMap<Integer, Jugador> partidas;
+    private ArrayList<Partida> partidas;
     private String nombre_juego;
 
     /**
@@ -19,54 +19,47 @@ public class Competencia {
      */
     public Competencia(String nombre_juego, ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
-        this.partidas = new HashMap<>();
+        this.partidas = new ArrayList<>();
         this.nombre_juego = nombre_juego;
     }
 
     /**
      * Ejecuta la lógica de las partidas por rondas hasta hallar un ganador.
      */
-    public void realizarPartidas() {
+  public void realizarPartidas(){
         Random random = new Random();
-        Sistema sistema = new Sistema(); // Asumo que esta clase maneja la config inicial
-        int contPartidas = 0;
+        Sistema sistema = new Sistema();
+        Partida p;
+        int indice1;
+        int indice2;
         boolean fin = false;
 
         int rondas = sistema.getRondas();
-        int cantJugadores = jugadores.size(); // Mejor usar el tamaño real de la lista
+        int cantJugadores = jugadores.size();
 
-        do { 
-            // Se asume que rondas-1 es la cantidad de emparejamientos necesarios
-            for (int i = 0; i < rondas; i++) {
-                int indice1 = random.nextInt(cantJugadores);
-                int indice2 = random.nextInt(cantJugadores);
+        do{ 
+        for(int i = 0; i < rondas; i++){
+            indice1 = random.nextInt(cantJugadores);
+            indice2 = random.nextInt(cantJugadores);
+            while(indice1 == indice2) indice2 =random.nextInt(cantJugadores);
+            Jugador j1 = jugadores.get(indice1);
+            Jugador j2 = jugadores.get(indice2);
 
-                while (indice1 == indice2) {
-                    indice2 = random.nextInt(cantJugadores);
-                }
-
-                Jugador j1 = jugadores.get(indice1);
-                Jugador j2 = jugadores.get(indice2);
-
-                if (verificarPartida(j1, j2)) {
-                    contPartidas++;
-                    j1.setEmparejado(true);
-                    j2.setEmparejado(true);
-                    
-                    Partida p = new Partida(j1, j2, nombre_juego);
-                    p.asignarPuntajes();
-                    partidas.put(contPartidas, p.getGanador());
-                } else {
-                    i--; 
-                }
+            if(verificarPartida(j1, j2)){
+                jugadores.get(indice1).setEmparejado(true);
+                jugadores.get(indice2).setEmparejado(true);
+                p = new Partida(j1, j2, nombre_juego);
+                p.asignarPuntajes();
+                partidas.add(p);
             }
+            else i--;
+        }
+        if(rondas == 1) fin = true;
+        rondas = rondas/2;
+        reiniciarEmparejamiento();
+        }while(!fin);
 
-            if (rondas <= 1) fin = true;
-            rondas = rondas / 2;
-            reiniciarEmparejamiento();
-        } while (!fin);
-
-        System.out.println("Ganador de " + nombre_juego + ": " + getGanadorCompetencia().getNombre());
+        System.out.println("Competencia terminada, ganador: " + getGanadorCompetencia().getNombre());
     }
 
     /**
@@ -106,7 +99,7 @@ public class Competencia {
      * Retorna el historial de partidas disputadas.
      * @return Un {@code HashMap} con el ID de partida y el ganador correspondiente.
      */
-    public HashMap<Integer, Jugador> getPartidas() {
+    public ArrayList<Partida> getPartidas() {
         return partidas;
     }
     public String getNombre_juego(){

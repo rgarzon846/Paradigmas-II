@@ -108,11 +108,14 @@ public class Sistema
 
     void mostrarHistorialDePartidas(){
         int i = 1;
-        System.out.println("El historial de partidas es: ");
         for(Competencia c : historial_de_competencias){
-            System.out.println("Ganador Partida " + i + ": " + c.getPartidas().get(i));
+            System.out.println("Partidas de la competencia: " + c.getNombre_juego());
+            for(Partida p : c.getPartidas()){
+            System.out.println("Nro de partida: " + i + ", ganador de la partida: " + p.getGanador().getNombre() + " DNI: " + p.getGanador().getNombre());
             i++;
         }
+        i = 1;
+    }
     }
 
     public void buscarJugador(){
