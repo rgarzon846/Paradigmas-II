@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-import java.util.*;
+import java.util.Random;
 public class Partida
 {
     // instance variables - replace the example below with your own
@@ -41,9 +41,11 @@ public class Partida
         if(jugador == 1){
             ganador = jugador1;
             jugador1.modificarPuntaje(1);
+            jugador2.setEliminado(true);
         }else if(jugador == 2){
             ganador = jugador2;
             jugador2.modificarPuntaje(1);
+            
         }else{
             casoEmpate();
         }
