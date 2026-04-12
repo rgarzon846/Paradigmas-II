@@ -44,9 +44,23 @@ public class Sistema
         cant_jugadores = (int) Math.pow(2, cant_rondas);
         
         for(int i = 0; i < cant_jugadores - 1; i++){
-            
-            Jugador jugador = new Jugador();
+            jugadores.add(cargarJugador());
         }
+        comprobarRepetidos();
         
     }
+    Jugador cargarJugador(){
+        String nombre = "";
+        int dni = 0;
+        System.out.println("Ingrese el nombre del jugador: ");
+        nombre = terminal.nextLine();
+        System.out.println("Ingrese el dni del jugador");
+        dni = terminal.nextInt();
+        Jugador jugador = new Jugador(nombre, dni);
+        return jugador;
+    }
+    ArrayList<Jugador> comprobarRepetidos(){
+        
+    }
+    
 }
