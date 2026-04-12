@@ -12,7 +12,7 @@ public class Sistema
     // instance variables - replace the example below with your own
     private 
     ArrayList<Jugador> jugadores;
-    HashMap<Competencia, Jugador> competencias;
+    HashMap<String, Jugador> competencias;
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
@@ -78,7 +78,17 @@ public class Sistema
     
     void iniciarCompetencia(){
         String nombre_juego = " ";
-        
+        System.out.println("Ingrese el nombre del juego a jugarse: ");
+        nombre_juego = terminal.nextLine();
         Competencia competencia = new Competencia(nombre_juego, jugadores);
+        cargarGanador(nombre_juego, competencia.getGanadorCompetencia());
+    }
+    void cargarGanador(String nombre_juego, Jugador ganador){
+        competencias.put(nombre_juego, ganador);
+    }
+    void imprimirGanadoresDeCadaJuego(){
+        for(){
+            
+        }
     }
 }
