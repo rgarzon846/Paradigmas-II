@@ -46,21 +46,21 @@ public class Sistema
         cant_rondas = terminal.nextInt();
         cant_jugadores = (int) Math.pow(2, cant_rondas);
         
-        for(int i = 0; i < cant_jugadores - 1; i++){
-            jugadores.add(cargarJugador());
+        for(int i = 0; i < cant_jugadores; i++){
+            jugadores.add(cargarJugador(i));
         }
         
         
     }
-    private Jugador cargarJugador(){
+    private Jugador cargarJugador(int i){
         String nombre = "";
         int dni = 0;
-        System.out.println("Ingrese el nombre del jugador: ");
+        System.out.println("Ingrese el nombre del jugador" + i + ": ");
         terminal.nextLine();
         nombre = terminal.nextLine();
         nombre.toLowerCase().trim();
         do{
-        System.out.println("Ingrese el dni del jugador");
+        System.out.println("Ingrese el dni del jugador" + i + ": ");
         dni = terminal.nextInt();
         }while(comprobarRepetidos(dni));
         Jugador jugador = new Jugador(nombre, dni);
@@ -69,6 +69,7 @@ public class Sistema
     private boolean comprobarRepetidos(int dni){
         for(Jugador j : jugadores){
             if(j.getDni() == dni){
+                
                 return true;
             }
         }
