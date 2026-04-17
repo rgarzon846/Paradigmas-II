@@ -2,29 +2,29 @@
 import java.util.*;
 
 /**
- * Gestiona el desarrollo de la competencia, coordina las rondas, 
+ * Gestiona el desarrollo de la VideoJuego, coordina las rondas, 
  * los emparejamientos aleatorios y la determinación del ganador final.
  * * @author Sanchez Solano Juan Cruz 
  * @version 1.0
  */
-public class Competencia {
+public class VideoJuego {
     private ArrayList<Jugador> jugadores;
     private ArrayList<Partida> partidas;
     private String nombre_juego;
-    private Jugador ganador_de_competencia;
+    private Jugador ganador_de_VideoJuego;
     int rondas;
 
     /**
-     * Constructor del objeto Competencia.
+     * Constructor del objeto VideoJuego.
      * @param nombre_juego Nombre del juego o torneo.
      * @param jugadores Lista inicial de participantes.
      */
-    public Competencia(String nombre_juego, ArrayList<Jugador> jugadores, int rondas) {
+    public VideoJuego(String nombre_juego, ArrayList<Jugador> jugadores, int rondas) {
         this.jugadores = jugadores;
         this.partidas = new ArrayList<>();
         this.nombre_juego = nombre_juego;
         this.rondas = rondas;
-        ganador_de_competencia = new Jugador();
+        ganador_de_VideoJuego = new Jugador();
     }
 
     /**
@@ -62,8 +62,8 @@ public class Competencia {
         reiniciarEmparejamiento();
         }while(!fin);
         
-        setGanadorCompetencia();
-        System.out.println("Competencia terminada, ganador: " + getGanadorCompetencia().getNombre());
+        setGanadorVideoJuego();
+        System.out.println("VideoJuego terminada, ganador: " + getGanadorVideoJuego().getNombre());
     }
 
     /**
@@ -95,15 +95,15 @@ public class Competencia {
      * Busca en la lista al único jugador que no ha sido eliminado.
      * @return El objeto {@link Jugador} ganador.
      */
-    private void setGanadorCompetencia() {
+    private void setGanadorVideoJuego() {
         for (Jugador p : jugadores) {
             if (!p.getEliminado()) {
-                this.ganador_de_competencia = p; // Retornamos apenas lo encontramos
+                this.ganador_de_VideoJuego = p; // Retornamos apenas lo encontramos
             }
         }
     }
-    public Jugador getGanadorCompetencia(){
-        return ganador_de_competencia;
+    public Jugador getGanadorVideoJuego(){
+        return ganador_de_VideoJuego;
     }
 
     /**

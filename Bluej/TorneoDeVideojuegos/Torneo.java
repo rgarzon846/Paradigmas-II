@@ -1,35 +1,36 @@
 
 /**
- * Sistema de administracion de torneo de videojuegos.
+ * Torneo de administracion de torneo de videojuegos.
  * Permite ingresar jugadores, buscar jugadores, ver estadisticas de jugadores y listar jugadores.
  * @author Juan, Rocio 
  * @version 1.0
  */
 import java.util.*;
+import java.io.*;
 
-public class Sistema
+public class Torneo
 {
     private 
     ArrayList<Jugador> jugadores;
-    ArrayList<Competencia> historial_de_competencias;
+    ArrayList<VideoJuego> historial_de_VideoJuegos;
     int cant_jugadores;
     int cant_rondas;
     Scanner terminal;
     /**
-     * Constructor clase Sistema
+     * Constructor clase Torneo
     */
-    public Sistema()
+    public Torneo()
     {
         
         jugadores = new ArrayList<>();
-        historial_de_competencias = new ArrayList<>();
+        historial_de_VideoJuegos = new ArrayList<>();
         cant_jugadores = 0;
         cant_rondas = 0;
         terminal = new Scanner(System.in);
     }
 
     /**
-     * Muestra la cantidad de rondas elegidas para la competencia
+     * Muestra la cantidad de rondas elegidas para la VideoJuego
      */
     public 
     int getRondas(){
@@ -40,7 +41,8 @@ public class Sistema
      */
     void ingresarJugadores()
     {
-        System.out.println("Ingrese la cantidad de rondas que tendra cada competencia por favor: ");
+        try{
+        System.out.println("Ingrese la cantidad de rondas que tendra cada VideoJuego por favor: ");
         cant_rondas = terminal.nextInt();
         terminal.nextLine();
         cant_jugadores = (int) Math.pow(2, cant_rondas);
@@ -49,6 +51,9 @@ public class Sistema
             jugadores.add(cargarJugador(i));
         }
         System.out.println("Se completo el cupo de inscripciones del torneo!");
+    }catch(IOException e){
+        System
+    }
 
     }
     /**
@@ -98,31 +103,31 @@ public class Sistema
             }
     }
     /**
-     * Permite crear la competencia del juego que se desee
+     * Permite crear la VideoJuego del juego que se desee
      */
-    void iniciarCompetencia(){
+    void iniciarVideoJuego(){
         String nombre_juego = " ";
         System.out.println("Ingrese el nombre del juego a jugarse: ");
         nombre_juego = terminal.nextLine();
-        Competencia competencia = new Competencia(nombre_juego, jugadores, cant_rondas);
-        competencia.realizarPartidas();
-        historial_de_competencias.add(competencia);
+        VideoJuego video_juego = new VideoJuego(nombre_juego, jugadores, cant_rondas);
+        video_juego.realizarPartidas();
+        historial_de_VideoJuegos.add(video_juego);
     }
     /**
-     * Imprime el ganador de cada competencia en formato lista
+     * Imprime el ganador de cada VideoJuego en formato lista
      */
     void imprimirGanadoresDeCadaJuego(){
-        for(Competencia c : historial_de_competencias){
-            System.out.println("Juego jugado: " + c.getNombre_juego() + "       ganador: " + c.getGanadorCompetencia().getNombre() + " dni: " + c.getGanadorCompetencia().getDni());
+        for(VideoJuego c : historial_de_VideoJuegos){
+            System.out.println("Juego jugado: " + c.getNombre_juego() + "       ganador: " + c.getGanadorVideoJuego().getNombre() + " dni: " + c.getGanadorVideoJuego().getDni());
         }
     }
     /**
-     * Imprime cada partida de la competencia y su ganador en formato lista
+     * Imprime cada partida de la VideoJuego y su ganador en formato lista
      */
     void mostrarHistorialDePartidas(){
         int i = 1;
-        for(Competencia c : historial_de_competencias){
-            System.out.println("Partidas de la competencia: " + c.getNombre_juego());
+        for(VideoJuego c : historial_de_VideoJuegos){
+            System.out.println("Partidas de la VideoJuego: " + c.getNombre_juego());
             for(Partida p : c.getPartidas()){
             System.out.println("Nro de partida: " + i + ", ganador de la partida: " + p.getGanador().getNombre() + " DNI: " + p.getGanador().getDni());
             i++;

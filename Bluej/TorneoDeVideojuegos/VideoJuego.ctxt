@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=Competencia
-comment0.text=\n\ Gestiona\ el\ desarrollo\ de\ la\ competencia,\ coordina\ las\ rondas,\ \n\ los\ emparejamientos\ aleatorios\ y\ la\ determinaci\u00F3n\ del\ ganador\ final.\n\ *\ @author\ Sanchez\ Solano\ Juan\ Cruz\ \n\ @version\ 1.0\n
+comment0.target=VideoJuego
+comment0.text=\n\ Gestiona\ el\ desarrollo\ de\ la\ VideoJuego,\ coordina\ las\ rondas,\ \n\ los\ emparejamientos\ aleatorios\ y\ la\ determinaci\u00F3n\ del\ ganador\ final.\n\ *\ @author\ Sanchez\ Solano\ Juan\ Cruz\ \n\ @version\ 1.0\n
 comment1.params=nombre_juego\ jugadores\ rondas
-comment1.target=Competencia(java.lang.String,\ java.util.ArrayList,\ int)
-comment1.text=\n\ Constructor\ del\ objeto\ Competencia.\n\ @param\ nombre_juego\ Nombre\ del\ juego\ o\ torneo.\n\ @param\ jugadores\ Lista\ inicial\ de\ participantes.\n
+comment1.target=VideoJuego(java.lang.String,\ java.util.ArrayList,\ int)
+comment1.text=\n\ Constructor\ del\ objeto\ VideoJuego.\n\ @param\ nombre_juego\ Nombre\ del\ juego\ o\ torneo.\n\ @param\ jugadores\ Lista\ inicial\ de\ participantes.\n
 comment2.params=
 comment2.target=void\ realizarPartidas()
 comment2.text=\n\ Ejecuta\ la\ l\u00F3gica\ de\ las\ partidas\ por\ rondas\ hasta\ hallar\ un\ ganador.\n
@@ -16,10 +16,10 @@ comment4.text=\n\ Restablece\ el\ estado\ de\ emparejamiento\ de\ todos\ los\ ju
 comment5.params=
 comment5.target=void\ reiniciarEliminado()
 comment6.params=
-comment6.target=void\ setGanadorCompetencia()
+comment6.target=void\ setGanadorVideoJuego()
 comment6.text=\n\ Busca\ en\ la\ lista\ al\ \u00FAnico\ jugador\ que\ no\ ha\ sido\ eliminado.\n\ @return\ El\ objeto\ {@link\ Jugador}\ ganador.\n
 comment7.params=
-comment7.target=Jugador\ getGanadorCompetencia()
+comment7.target=Jugador\ getGanadorVideoJuego()
 comment8.params=
 comment8.target=java.util.ArrayList\ getPartidas()
 comment8.text=\n\ Retorna\ el\ historial\ de\ partidas\ disputadas.\n\ @return\ Un\ {@code\ HashMap}\ con\ el\ ID\ de\ partida\ y\ el\ ganador\ correspondiente.\n
